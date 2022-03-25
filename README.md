@@ -15,7 +15,7 @@ Transportband:
 
 Vision Camera:
 
-* Allied Vision: Mako G-040C PoE (part number: 12749 and serial number: 536957889) [Allied Vision camera](https://www.edmundoptics.com/p/allied-vision-mako-g-040-129-color-cmos-camera/40203/)
+* Allied Vision: Mako G-040C PoE (part number: 12749 and serial number: 536957889) [Allied Vision camera](https://cdn.alliedvision.com/fileadmin/pdf/en/Mako_G-040_DataSheet_V2.2.0_en.pdf)
 * Internet Cable: NET-CAT6-1^S-H-5M 
 * Mounting plate Mako G
 * Kowa CCTV LENS: LM8JC 2/3" 8mm/F1.4
