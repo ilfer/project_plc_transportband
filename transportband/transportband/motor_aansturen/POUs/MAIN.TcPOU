@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="MAIN" Id="{73d23b6c-8b30-4588-8b3a-0edb20e25878}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	enable AT%Q* : BOOL;
+	speed AT%Q* : INT;
+	motor_aan AT%Q* : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[motor();]]></ST>
+    </Implementation>
+    <Action Name="motor" Id="{cc3ce1ad-8f58-4bd2-ad22-b2c7c999bb6b}">
+      <Implementation>
+        <ST><![CDATA[speed := 20000;
+
+IF enable = TRUE THEN
+	motor_aan := speed;
+END_IF;]]></ST>
+      </Implementation>
+    </Action>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="MAIN.motor">
+      <LineId Id="20" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="1" Count="0" />
+      <LineId Id="16" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
