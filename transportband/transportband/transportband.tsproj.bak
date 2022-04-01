@@ -1826,9 +1826,9 @@ External Setpoint Generation:
 			</NC>
 		</Motion>
 		<Plc>
-			<Project GUID="{3A9D14E6-CF8D-43EC-B7B5-C018ED9A22D3}" Name="motor_aansturen" PrjFilePath="motor_aansturen\motor_aansturen.plcproj" TmcFilePath="motor_aansturen\motor_aansturen.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+			<Project Disabled="true" GUID="{3A9D14E6-CF8D-43EC-B7B5-C018ED9A22D3}" Name="motor_aansturen_dc" PrjFilePath="motor_aansturen_dc\motor_aansturen_dc.plcproj" TmcFilePath="motor_aansturen_dc\motor_aansturen_dc.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
 				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="motor_aansturen\motor_aansturen.tmc">
-					<Name>motor_aansturen Instance</Name>
+					<Name>motor_aansturen_dc Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="2" AreaNo="1">
 						<Name>PlcTask Outputs</Name>
@@ -2594,7 +2594,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="Drive^Outputs^Out^nDataOut2[0]" VarB="DCM Velocity Channel 2^Velocity"/>
 			</OwnerB>
 		</OwnerA>
-		<OwnerA Name="TIPC^motor_aansturen^motor_aansturen Instance">
+		<OwnerA Name="TIPC^motor_aansturen_dc^motor_aansturen_dc Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EL7332)">
 				<Link VarA="PlcTask Outputs^MAIN.motor_bediening" VarB="DCM Control Channel 1^Control^Enable"/>
 				<Link VarA="PlcTask Outputs^MAIN.speed" VarB="DCM Velocity Channel 1^Velocity"/>
