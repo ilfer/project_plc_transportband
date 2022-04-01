@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.22">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{DB6B59A0-4FB0-4B14-A83C-AC7A76AD688D}">JobTaskId</Name>
+			<BitSize>32</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</BaseType>
+			<Properties>
+				<Property>
+					<Name>TcJobTaskOID</Name>
+				</Property>
+			</Properties>
+		</DataType>
+	</DataTypes>
+	<Project ProjectGUID="{F7E6FDDB-D55D-4EEB-93EC-3E089D57E304}" TargetNetId="5.59.222.235.1.1" ShowHideConfigurations="#x6">
+		<Vision>
+			<JobPool Id="#x01010010" KeepUnrestoredLinks="2">
+				<Name>Vision Job Pool</Name>
+				<ImageId>382</ImageId>
+				<TmcDesc GUID="{0102000C-0000-0000-F000-000000000064}">
+					<Name>TcJobPool</Name>
+					<CLSID ClassFactory="TcRtsObjects">{0102000C-0000-0000-F000-000000000064}</CLSID>
+					<InitSequence>PO</InitSequence>
+					<Contexts>
+						<Context>
+							<Id>1</Id>
+							<Name>Default</Name>
+						</Context>
+					</Contexts>
+					<Interfaces>
+						<Interface>
+							<Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+						</Interface>
+						<Interface>
+							<Type GUID="{608163AC-389C-43E9-8DC8-CCEFA1A43821}">ITcJobPool</Type>
+						</Interface>
+					</Interfaces>
+					<Parameters>
+						<Parameter>
+							<Name>JobTasks</Name>
+							<BitSize>32</BitSize>
+							<BaseType GUID="{DB6B59A0-4FB0-4B14-A83C-AC7A76AD688D}">JobTaskId</BaseType>
+							<ArrayInfo>
+								<LBound>0</LBound>
+								<Elements Min="0" Max="64">1</Elements>
+							</ArrayInfo>
+							<PTCID>#x08508041</PTCID>
+							<ContextId>1</ContextId>
+						</Parameter>
+						<Parameter HideParameter="true" ReadOnly="true">
+							<Name>PoolId</Name>
+							<BitSize>32</BitSize>
+							<BaseType GUID="{18071995-0000-0000-0000-000000000008}">UDINT</BaseType>
+							<PTCID>#x08508042</PTCID>
+							<ContextId>1</ContextId>
+						</Parameter>
+					</Parameters>
+					<ParameterValues>
+						<Value>
+							<Name>JobTasks[0]</Name>
+							<Value>0</Value>
+						</Value>
+						<Value>
+							<Name>PoolId</Name>
+							<Value>1073741840</Value>
+						</Value>
+					</ParameterValues>
+				</TmcDesc>
+			</JobPool>
+			<App VisionAppGUID="{6D3CC5EE-361F-4DB0-8D21-4FFF01ADAF5F}">
+				<Name>Application1</Name>
+			</App>
+		</Vision>
+		<Io>
+			<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="5.59.222.235.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
+				<Name>Device 1 (EtherCAT)</Name>
+				<AddressInfo>
+					<Ccat>
+						<Address>-268435456</Address>
+						<Offset>131072</Offset>
+						<Size>8192</Size>
+						<BaseAddr>0</BaseAddr>
+						<BusNo>65535</BusNo>
+						<SlotNo>0</SlotNo>
+					</Ccat>
+				</AddressInfo>
+				<Image Id="1" AddrType="9" ImageType="3">
+					<Name>Image</Name>
+				</Image>
+				<EtherCAT/>
+			</Device>
+			<Device Id="2" DevType="112" AmsPort="28674" AmsNetId="5.59.222.235.3.1" RemoteName="Device 2 (EtherCAT Automation Protocol)">
+				<Name>Device 2 (EtherCAT Automation Protocol)</Name>
+				<AddressInfo>
+					<Pnp>
+						<DeviceDesc>FEC1</DeviceDesc>
+						<DeviceName>FEC1</DeviceName>
+						<DeviceData>0001053bdeeb</DeviceData>
+					</Pnp>
+				</AddressInfo>
+				<Image Id="3" AddrType="1" ImageType="3">
+					<Name>Image</Name>
+				</Image>
+				<Ethernet DeviceDesc="FEC1"/>
+				<Eap EapDeviceGuid="{06229776-A0A3-4F16-8599-6962FB22883A}"/>
+			</Device>
+			<Device Id="3" DevType="121">
+				<Name>Device 3 (NOV-DP-RAM)</Name>
+				<AddressInfo>
+					<Isa>
+						<Address>-267386880</Address>
+						<Size>131072</Size>
+					</Isa>
+				</AddressInfo>
+				<Vars VarGrpType="1" InsertType="1">
+					<Name>Inputs</Name>
+				</Vars>
+				<Vars VarGrpType="2" InsertType="1">
+					<Name>Outputs</Name>
+				</Vars>
+				<Image Id="4" ImageFlags="#x00000042" AddrType="12" ImageType="5">
+					<Name>Image</Name>
+				</Image>
+				<DpRam/>
+			</Device>
+		</Io>
+	</Project>
+</TcSmProject>
