@@ -6,6 +6,16 @@ VAR
 	enable AT%Q* : BOOL;
 	speed AT%Q* : INT;
 	motor_aan AT%Q* : INT;
+	iSpeed : int;
+
+	motor_bediening AT%Q* : BOOL;
+	timer_tof: TOF;
+	current_time: TIME;
+	timer_ton: TON;
+	
+	blink: BOOL;
+	blink_links: BOOL;
+	blink_rechts: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -13,11 +23,35 @@ END_VAR
     </Implementation>
     <Action Name="motor" Id="{cc3ce1ad-8f58-4bd2-ad22-b2c7c999bb6b}">
       <Implementation>
-        <ST><![CDATA[speed := 20000;
+        <ST><![CDATA[(*speed := 20000;
 
 IF enable = TRUE THEN
 	motor_aan := speed;
-END_IF;]]></ST>
+END_IF;*)
+
+//enable := TRUE;
+//speed := 20000;
+
+	
+	(*timer_tof(IN:= enable, PT:= T#5S, Q=> motor_bediening, ET=> current_time);
+	
+	IF current_time < T#2.5S
+		THEN speed:= -20000;
+	END_IF;*)
+	
+	timer_ton(IN:= NOT timer_ton.Q, PT:= T#10S);
+blink_links := timer_ton.ET > T#5S;
+blink_rechts := timer_ton.ET < T#5S;
+
+motor_bediening := (enable AND blink_links) OR (enable AND blink_rechts);
+
+	IF timer_ton.ET < T#5S
+		THEN speed:= iSpeed;
+	END_IF;
+	
+	IF timer_ton.ET > T#5S
+		THEN speed:= (iSpeed);
+	END_IF;]]></ST>
       </Implementation>
     </Action>
     <LineIds Name="MAIN">
@@ -28,6 +62,19 @@ END_IF;]]></ST>
       <LineId Id="19" Count="0" />
       <LineId Id="1" Count="0" />
       <LineId Id="16" Count="1" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="42" Count="1" />
+      <LineId Id="48" Count="4" />
+      <LineId Id="54" Count="1" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="60" Count="2" />
+      <LineId Id="71" Count="3" />
+      <LineId Id="59" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
