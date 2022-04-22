@@ -2,19 +2,19 @@
   <PropertyGroup>
     <FileVersion>1.0.0.0</FileVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0c07ad4a-536d-4a4a-b5dc-be0eac259b9e}</ProjectGuid>
+    <ProjectGuid>{b8b76050-1880-4970-aba1-85e0185d11f0}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
-    <Name>motor_aansturen_step</Name>
+    <Name>step_motor</Name>
     <ProgramVersion>3.1.4023.0</ProgramVersion>
-    <Application>{ea2de223-dc06-4483-8088-5e54110b733d}</Application>
-    <TypeSystem>{3c3e953c-e761-49df-a29f-0bd7add42136}</TypeSystem>
-    <Implicit_Task_Info>{fc9eb5e6-4afa-4427-a776-9f6392b9421f}</Implicit_Task_Info>
-    <Implicit_KindOfTask>{2f8459f9-1c18-48a0-9586-e00b479dcf1b}</Implicit_KindOfTask>
-    <Implicit_Jitter_Distribution>{05c04e27-471f-4f18-8ef1-89ef8ac5ef5e}</Implicit_Jitter_Distribution>
-    <LibraryReferences>{2c9a698a-df70-4397-b887-9662b94636a3}</LibraryReferences>
+    <Application>{fab453eb-5a10-49fb-9c1e-ef2c810f066f}</Application>
+    <TypeSystem>{073d8fee-e2bd-4544-a7ad-c02f3eaeda7f}</TypeSystem>
+    <Implicit_Task_Info>{26653623-33a0-4c55-90dd-96cb76a39410}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{3eb30629-c53a-4fe1-9a77-2df443944c24}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{f647f30d-5791-49df-888c-5db755e54119}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{3ace8031-83dc-4de0-9778-0360ec9b6439}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="PlcTask.TcTTO">
@@ -43,6 +43,11 @@
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc3_Module</Namespace>
     </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="step_motor.tmc">
+      <SubType>Content</SubType>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
