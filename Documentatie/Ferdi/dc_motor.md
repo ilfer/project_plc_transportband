@@ -7,11 +7,17 @@ The idea was to test this DC motor on the conveyor belt. More specifically, whet
 
 ## Materials and methods
 
-- DC Motor: Getriebemotor IG320516-FWF22R, 24V, 1:516
-- PLC card for the DC Motor: EL7332
+- DC motor: Getriebemotor IG320516-FWF22R, 24V, 1:516
+- PLC card for the DC motor: EL7332
+
+## Software
+[![dc.png](https://i.postimg.cc/Z52GQ2Dp/dc.png)](https://postimg.cc/CRCrBP0x)
+
+Explanation: <br />
+Every 5 seconds the direction of rotation will be changed. This is done where we invert the iSpeed. iSpeed is an integer that represents velocity. The range of this value is between -32767 and 32767.
 
 ## Result
-The dc motor is not strong enough to run the conveyor belt.
+The DC motor is not strong enough to run the conveyor belt.
 
 ## Solution
 Use a different (stronger) motor. The stepper motor AS1010-0000 will be tested.
