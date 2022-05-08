@@ -27,7 +27,7 @@ Here you follow the steps at the Setup instructions folder and download the TF7x
 After everything is done correctly you can start a twincat project. The following steps to display the VISION configuration follow the steps in the "Displaying a Vision node and creating an application" folder. After these steps, follow the steps in the "Creating a GigE Vision camera" folder to configure the camera correctly.
 To make the camera work connect the output of your PoE injector to your laptop and replace the ethernet settings in the network center to an ip address that is in the range as your camera.
 
-Once the camera is found you can activate it. You can find the activity status in the General tab here with both the IP address and other information.
+Once the camera is found you can activate it. You can find the activity status in the General tab here with both the IP address and other information.  
 ![image](https://user-images.githubusercontent.com/79916453/167303314-0a3ea377-0df7-4d78-8fcb-8b016d0c0aaa.png)  
 
 To see the image, go to the configuration Assistant and press the start Acquisition button. Turn on De-Bayering for color and change the ExposureTimeAbs value.
