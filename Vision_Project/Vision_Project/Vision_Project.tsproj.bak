@@ -3454,6 +3454,83 @@
 					<Name>Camera1</Name>
 					<Xml>
 						<TcSmExtensions>
+							<TcSmExtension Guid="{33C329CA-0FC8-4642-AAD4-8B686DE88046}">
+								<Settings>
+									<CameraCalibration>
+										<PatternType Type="System.String">Chessboard</PatternType>
+										<PatternOrigin Type="System.String">Center</PatternOrigin>
+										<PatternFilePath Type="System.String"/>
+										<PatternWidth Type="System.Int32">9</PatternWidth>
+										<PatternHeight Type="System.Int32">6</PatternHeight>
+										<PatternPointDistX Type="System.Single">1</PatternPointDistX>
+										<PatternPointDistY Type="System.Single">1</PatternPointDistY>
+										<AsymFirstRowIndented Type="System.Boolean">False</AsymFirstRowIndented>
+										<InvertColor Type="System.Boolean">False</InvertColor>
+										<FixAspectRatio Type="System.Boolean">True</FixAspectRatio>
+										<FixCenterPoint Type="System.Boolean">True</FixCenterPoint>
+										<FixP1P2 Type="System.Boolean">False</FixP1P2>
+										<FixK3 Type="System.Boolean">False</FixK3>
+										<FixK4 Type="System.Boolean">False</FixK4>
+										<FixK5K6 Type="System.Boolean">True</FixK5K6>
+										<bFilterByArea Type="System.Boolean">True</bFilterByArea>
+										<eBlobCombination Type="System.String">MEDIAN_THRESHOLD</eBlobCombination>
+										<nMinRepeatability Type="System.UInt32">2</nMinRepeatability>
+										<fMinBlobDistance Type="System.Single">10</fMinBlobDistance>
+										<fThresholdStep Type="System.Single">10</fThresholdStep>
+										<fMaxThreshold Type="System.Single">220</fMaxThreshold>
+										<fMinThreshold Type="System.Single">50</fMinThreshold>
+										<eThresholdType Type="System.String">BINARY</eThresholdType>
+										<fMaxInertiaRatio Type="System.Single">1</fMaxInertiaRatio>
+										<fMinInertiaRatio Type="System.Single">0.1</fMinInertiaRatio>
+										<fMaxEccentricity Type="System.Single">0.2</fMaxEccentricity>
+										<fMinEccentricity Type="System.Single">0</fMinEccentricity>
+										<fMaxConvexity Type="System.Single">1</fMaxConvexity>
+										<fMinConvexity Type="System.Single">0.9</fMinConvexity>
+										<fMaxCircularity Type="System.Single">1</fMaxCircularity>
+										<fMinCircularity Type="System.Single">0.7</fMinCircularity>
+										<fMaxArea Type="System.Single">15000</fMaxArea>
+										<fMinArea Type="System.Single">25</fMinArea>
+										<bFilterByInertiaRatio Type="System.Boolean">True</bFilterByInertiaRatio>
+										<bFilterByEccentricity Type="System.Boolean">True</bFilterByEccentricity>
+										<bFilterByConvexity Type="System.Boolean">True</bFilterByConvexity>
+										<bFilterByCircularity Type="System.Boolean">True</bFilterByCircularity>
+										<Encoding Type="System.String">BayerRG</Encoding>
+										<Algorithm Type="System.String">PIXEL_CONTOURS</Algorithm>
+										<ReprojectionError Type="System.Double">-300</ReprojectionError>
+										<CameraMatrix0 Type="System.Double">1</CameraMatrix0>
+										<CameraMatrix1 Type="System.Double">0</CameraMatrix1>
+										<CameraMatrix2 Type="System.Double">0</CameraMatrix2>
+										<CameraMatrix3 Type="System.Double">0</CameraMatrix3>
+										<CameraMatrix4 Type="System.Double">1</CameraMatrix4>
+										<CameraMatrix5 Type="System.Double">0</CameraMatrix5>
+										<CameraMatrix6 Type="System.Double">0</CameraMatrix6>
+										<CameraMatrix7 Type="System.Double">0</CameraMatrix7>
+										<CameraMatrix8 Type="System.Double">1</CameraMatrix8>
+										<DistortionCoefficients0 Type="System.Double">0</DistortionCoefficients0>
+										<DistortionCoefficients1 Type="System.Double">0</DistortionCoefficients1>
+										<DistortionCoefficients2 Type="System.Double">0</DistortionCoefficients2>
+										<DistortionCoefficients3 Type="System.Double">0</DistortionCoefficients3>
+										<DistortionCoefficients4 Type="System.Double">0</DistortionCoefficients4>
+										<DistortionCoefficients5 Type="System.Double">0</DistortionCoefficients5>
+										<DistortionCoefficients6 Type="System.Double">0</DistortionCoefficients6>
+										<DistortionCoefficients7 Type="System.Double">0</DistortionCoefficients7>
+										<RotationMatrix0 Type="System.Double">1</RotationMatrix0>
+										<RotationMatrix1 Type="System.Double">0</RotationMatrix1>
+										<RotationMatrix2 Type="System.Double">0</RotationMatrix2>
+										<RotationMatrix3 Type="System.Double">0</RotationMatrix3>
+										<RotationMatrix4 Type="System.Double">1</RotationMatrix4>
+										<RotationMatrix5 Type="System.Double">0</RotationMatrix5>
+										<RotationMatrix6 Type="System.Double">0</RotationMatrix6>
+										<RotationMatrix7 Type="System.Double">0</RotationMatrix7>
+										<RotationMatrix8 Type="System.Double">1</RotationMatrix8>
+										<TranslationVector0 Type="System.Double">0</TranslationVector0>
+										<TranslationVector1 Type="System.Double">0</TranslationVector1>
+										<TranslationVector2 Type="System.Double">0</TranslationVector2>
+										<PatternReferencePoints Type="System.String"/>
+										<IntrinsicCalibrationDone Type="System.Boolean">False</IntrinsicCalibrationDone>
+									</CameraCalibration>
+								</Settings>
+							</TcSmExtension>
 							<TcSmExtension Guid="{E1903838-ED0C-4FE8-A3F7-E433F11BFE82}">
 								<Settings>
 									<CameraController>
@@ -3468,7 +3545,7 @@
 										<AutoCalcMaxPacketNumber Type="System.Boolean">True</AutoCalcMaxPacketNumber>
 										<CommunicationTimeout Type="System.Int32">3000</CommunicationTimeout>
 										<Visibility Type="System.String">Beginner</Visibility>
-										<ExpandedNodes Type="System.String">Root;TcCOM Parameters;Image Acquisition Module;GVCP Module;GVSP Module;GigE Vision;GenApi;Info;DeviceStatus;GigE;StreamHold;Timestamp;PTP;Acquisition;Trigger;TriggerSelector;ImageMode;ImageFormat;Controls;DSPSubregion;Exposure;ExposureAutoControl;GainControl;GainSelector;GainAutoControl;BlackLevelControl;Whitebalance;BalanceRatioSelector;BalanceWhiteAutoControl;Color Transformation Control;LUTControl;LUTSelector;LUTIndex;IO;SyncIn;SyncInSelector;SyncOut;SyncOutSelector;Strobe;EventControl;EventSelector;EventID;SavedUserSets;UserSetSelector;Action Control;Action Selector</ExpandedNodes>
+										<ExpandedNodes Type="System.String">Root;GenApi;Acquisition;Controls;Exposure</ExpandedNodes>
 										<useSelector Type="System.Boolean">True</useSelector>
 										<UsePacketDelayInConfigMode Type="System.Boolean">True</UsePacketDelayInConfigMode>
 									</CameraConfig>
@@ -9673,7 +9750,7 @@
 											<RegisterValue>00-00-00-01</RegisterValue>
 										</Register>
 										<Register Address="0x00024108">
-											<RegisterValue>42-74-5F-3B</RegisterValue>
+											<RegisterValue>42-41-3F-7D</RegisterValue>
 										</Register>
 										<Register Address="0x00024100">
 											<RegisterValue>00-00-00-02</RegisterValue>
@@ -9697,10 +9774,10 @@
 											<RegisterValue>3B-9A-CA-00</RegisterValue>
 										</Register>
 										<Register Address="0x0000094C">
-											<RegisterValue>5A-40-FB-5C</RegisterValue>
+											<RegisterValue>2F-55-0A-C0</RegisterValue>
 										</Register>
 										<Register Address="0x00000948">
-											<RegisterValue>00-00-00-62</RegisterValue>
+											<RegisterValue>00-00-00-10</RegisterValue>
 										</Register>
 										<Register Address="0x00025000">
 											<RegisterValue>00-00-00-01</RegisterValue>
@@ -9794,7 +9871,7 @@
 											<RegisterValue>00-00-0D-68</RegisterValue>
 										</Register>
 										<Register Address="0x0001313C">
-											<RegisterValue>00-00-27-73</RegisterValue>
+											<RegisterValue>00-01-87-03</RegisterValue>
 										</Register>
 										<Register Address="0x00013134">
 											<RegisterValue>01-EB-85-1E</RegisterValue>
@@ -9808,11 +9885,17 @@
 										<Register Address="0x000140F8">
 											<RegisterValue>00-00-02-D8</RegisterValue>
 										</Register>
+										<Register Address="0x000140F0">
+											<RegisterValue>00-00-00-00</RegisterValue>
+										</Register>
 										<Register Address="0x00011028">
 											<RegisterValue>00-00-02-20</RegisterValue>
 										</Register>
 										<Register Address="0x000140FC">
 											<RegisterValue>00-00-02-20</RegisterValue>
+										</Register>
+										<Register Address="0x000140F4">
+											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
 										<Register Address="0x00011000">
 											<RegisterValue>00-00-01-FF</RegisterValue>
@@ -9889,12 +9972,6 @@
 										<Register Address="0x00012200">
 											<RegisterValue>00-06-0B-00</RegisterValue>
 										</Register>
-										<Register Address="0x000140F0">
-											<RegisterValue>00-00-00-00</RegisterValue>
-										</Register>
-										<Register Address="0x000140F4">
-											<RegisterValue>00-00-00-00</RegisterValue>
-										</Register>
 										<Register Address="0x00014104">
 											<RegisterValue>00-00-00-01</RegisterValue>
 										</Register>
@@ -9902,7 +9979,7 @@
 											<RegisterValue>00-00-00-1E</RegisterValue>
 										</Register>
 										<Register Address="0x00014110">
-											<RegisterValue>00-00-27-11</RegisterValue>
+											<RegisterValue>00-01-86-A1</RegisterValue>
 										</Register>
 										<Register Address="0x00014108">
 											<RegisterValue>00-00-00-13</RegisterValue>
@@ -9947,6 +10024,12 @@
 										<Register Address="0x00014148">
 											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
+										<Register Address="0x00014154">
+											<RegisterValue>00-00-00-00</RegisterValue>
+										</Register>
+										<Register Address="0x00014158">
+											<RegisterValue>00-00-01-90</RegisterValue>
+										</Register>
 										<Register Address="0x0001414C">
 											<RegisterValue>00-00-01-90</RegisterValue>
 										</Register>
@@ -9962,12 +10045,6 @@
 										</Register>
 										<Register Address="0x0001415C">
 											<RegisterValue>00-00-00-32</RegisterValue>
-										</Register>
-										<Register Address="0x00014154">
-											<RegisterValue>00-00-00-00</RegisterValue>
-										</Register>
-										<Register Address="0x00014158">
-											<RegisterValue>00-00-01-90</RegisterValue>
 										</Register>
 										<Register Address="0x00014160">
 											<RegisterValue>00-00-00-64</RegisterValue>
@@ -10000,11 +10077,11 @@
 											<RegisterValue>40-80-00-00</RegisterValue>
 										</Register>
 										<Register Address="0x00014190">
-											<RegisterValue>00-00-00-BF</RegisterValue>
+											<RegisterValue>00-00-00-E1</RegisterValue>
 										</Register>
 										<Register Address="0x00014190">
 											<Selector SelectorName="BalanceRatioSelector">0</Selector>
-											<RegisterValue>00-00-00-BF</RegisterValue>
+											<RegisterValue>00-00-00-E1</RegisterValue>
 										</Register>
 										<Register Address="0x00014188">
 											<RegisterValue>00-00-00-50</RegisterValue>
@@ -10064,6 +10141,13 @@
 											<Selector SelectorName="LUTSelector">0</Selector>
 											<RegisterValue>00-00-00-CC</RegisterValue>
 										</Register>
+										<Register Address="0x00014394">
+											<RegisterValue>00-00-00-00</RegisterValue>
+										</Register>
+										<Register Address="0x00014394">
+											<Selector SelectorName="LUTSelector">0</Selector>
+											<RegisterValue>00-00-00-00</RegisterValue>
+										</Register>
 										<Register Address="0x0001438C">
 											<RegisterValue>00-03-00-00</RegisterValue>
 										</Register>
@@ -10087,13 +10171,6 @@
 										</Register>
 										<Register Address="0x00014378">
 											<RegisterValue>00-00-00-0F</RegisterValue>
-										</Register>
-										<Register Address="0x00014394">
-											<RegisterValue>00-00-00-00</RegisterValue>
-										</Register>
-										<Register Address="0x00014394">
-											<Selector SelectorName="LUTSelector">0</Selector>
-											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
 										<Register Address="0x00014398">
 											<RegisterValue>00-00-0F-FF</RegisterValue>
@@ -10307,11 +10384,11 @@
 											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
 										<Register Address="0x00014194">
-											<RegisterValue>00-00-01-00</RegisterValue>
+											<RegisterValue>00-00-00-F5</RegisterValue>
 										</Register>
 										<Register Address="0x00014194">
 											<Selector SelectorName="BalanceRatioSelector">1</Selector>
-											<RegisterValue>00-00-01-00</RegisterValue>
+											<RegisterValue>00-00-00-F5</RegisterValue>
 										</Register>
 										<Register Address="0x0001514C">
 											<RegisterValue>00-00-00-04</RegisterValue>
@@ -10327,7 +10404,22 @@
 											<Selector SelectorName="SyncOutSelector">2</Selector>
 											<RegisterValue>00-00-00-04</RegisterValue>
 										</Register>
-										<Register Address="0x00014338">
+										<Register Address="0x00000024">
+											<RegisterValue>A9-FE-FB-AE</RegisterValue>
+										</Register>
+										<Register Address="0x00000034">
+											<RegisterValue>FF-FF-00-00</RegisterValue>
+										</Register>
+										<Register Address="0x00000044">
+											<RegisterValue>00-00-00-00</RegisterValue>
+										</Register>
+										<Register Address="0x0000064C">
+											<RegisterValue>A9-FE-7B-2D</RegisterValue>
+										</Register>
+										<Register Address="0x0000065C">
+											<RegisterValue>FF-FF-00-00</RegisterValue>
+										</Register>
+										<Register Address="0x0000066C">
 											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
 										<Register Address="0x00000000">
@@ -10402,26 +10494,8 @@
 										<Register Address="0x0000000C">
 											<RegisterValue>31-5C-E0-41</RegisterValue>
 										</Register>
-										<Register Address="0x00000024">
-											<RegisterValue>A9-FE-FB-AE</RegisterValue>
-										</Register>
-										<Register Address="0x00000034">
-											<RegisterValue>FF-FF-00-00</RegisterValue>
-										</Register>
-										<Register Address="0x00000044">
-											<RegisterValue>00-00-00-00</RegisterValue>
-										</Register>
 										<Register Address="0x00000014">
 											<RegisterValue>00-00-00-06</RegisterValue>
-										</Register>
-										<Register Address="0x0000064C">
-											<RegisterValue>A9-FE-7B-2D</RegisterValue>
-										</Register>
-										<Register Address="0x0000065C">
-											<RegisterValue>FF-FF-00-00</RegisterValue>
-										</Register>
-										<Register Address="0x0000066C">
-											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
 									</RegisterValues>
 									<MetaData>
@@ -10582,7 +10656,7 @@
 											<RegisterValue>00-00-00-01</RegisterValue>
 										</Register>
 										<Register Address="0x00014110">
-											<RegisterValue>00-00-27-11</RegisterValue>
+											<RegisterValue>00-01-86-A1</RegisterValue>
 										</Register>
 										<Register Address="0x00014124">
 											<RegisterValue>00-00-00-32</RegisterValue>
@@ -10608,7 +10682,15 @@
 										<Register Address="0x00014150">
 											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
+										<Register Address="0x00014150">
+											<Selector SelectorName="GainSelector">0</Selector>
+											<RegisterValue>00-00-00-00</RegisterValue>
+										</Register>
 										<Register Address="0x00014144">
+											<RegisterValue>00-00-00-01</RegisterValue>
+										</Register>
+										<Register Address="0x00014144">
+											<Selector SelectorName="GainSelector">0</Selector>
 											<RegisterValue>00-00-00-01</RegisterValue>
 										</Register>
 										<Register Address="0x0001415C">
@@ -10636,11 +10718,11 @@
 											<RegisterValue>3F-80-00-00</RegisterValue>
 										</Register>
 										<Register Address="0x00014190">
-											<RegisterValue>00-00-00-BF</RegisterValue>
+											<RegisterValue>00-00-00-E1</RegisterValue>
 										</Register>
 										<Register Address="0x00014190">
 											<Selector SelectorName="BalanceRatioSelector">0</Selector>
-											<RegisterValue>00-00-00-BF</RegisterValue>
+											<RegisterValue>00-00-00-E1</RegisterValue>
 										</Register>
 										<Register Address="0x00014184">
 											<RegisterValue>00-00-00-01</RegisterValue>
@@ -10735,6 +10817,10 @@
 										<Register Address="0x00009804">
 											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
+										<Register Address="0x00009804">
+											<Selector SelectorName="ActionSelector">0</Selector>
+											<RegisterValue>00-00-00-00</RegisterValue>
+										</Register>
 										<Register Address="0x00009800">
 											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
@@ -10743,11 +10829,11 @@
 											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
 										<Register Address="0x00014194">
-											<RegisterValue>00-00-01-00</RegisterValue>
+											<RegisterValue>00-00-00-F5</RegisterValue>
 										</Register>
 										<Register Address="0x00014194">
 											<Selector SelectorName="BalanceRatioSelector">1</Selector>
-											<RegisterValue>00-00-01-00</RegisterValue>
+											<RegisterValue>00-00-00-F5</RegisterValue>
 										</Register>
 										<Register Address="0x00014338">
 											<RegisterValue>00-00-00-00</RegisterValue>
@@ -10782,14 +10868,14 @@
 										<CameraRegisterChild Name="PtpAcquisitionGateTime" Address="0x00025110" Data="00-00-00-00" Key="6" UniqueKey="6" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="StreamFrameRateConstrain" Address="0x00011168" Data="00-00-00-01" Key="9" UniqueKey="7" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="TriggerSelector" Address="0x00000000" Key="10" UniqueKey="8" Flags="01-00-00-01">
-											<CameraRegisterChild Name="TriggerSource" Address="0x000134D0" Key="11" UniqueKey="9" Flags="01-00-00-00"/>
-											<CameraRegisterChild Name="TriggerActivation" Address="0x000134D8" Key="12" UniqueKey="10" Flags="01-00-00-00"/>
-											<CameraRegisterChild Name="TriggerMode" Address="0x000134D0" Key="11" UniqueKey="11" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="TriggerMode" Address="0x000134D0" Key="11" UniqueKey="9" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="TriggerSource" Address="0x000134D0" Key="11" UniqueKey="10" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="TriggerActivation" Address="0x000134D8" Key="12" UniqueKey="11" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
 										<CameraRegisterChild Name="TriggerSelector" Address="0x00000000" Key="13" UniqueKey="13" Flags="01-00-00-01">
-											<CameraRegisterChild Name="TriggerSource" Address="0x00013510" Key="14" UniqueKey="14" Flags="01-00-00-00"/>
-											<CameraRegisterChild Name="TriggerActivation" Address="0x00013518" Key="15" UniqueKey="15" Flags="01-00-00-00"/>
-											<CameraRegisterChild Name="TriggerMode" Address="0x00013510" Key="14" UniqueKey="16" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="TriggerMode" Address="0x00013510" Key="14" UniqueKey="14" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="TriggerSource" Address="0x00013510" Key="14" UniqueKey="15" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="TriggerActivation" Address="0x00013518" Key="15" UniqueKey="16" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
 										<CameraRegisterChild Name="TriggerSelector" Address="0x00000000" Key="16" UniqueKey="18" Flags="01-00-00-01">
 											<CameraRegisterChild Name="TriggerMode" Address="0x00013590" Key="17" UniqueKey="19" Flags="01-00-00-00"/>
@@ -10824,7 +10910,7 @@
 										<CameraRegisterChild Name="DSPSubregionBottom" Address="0x000140FC" Data="00-00-02-20" Key="42" UniqueKey="48" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureAuto" Address="0x00014104" Data="00-00-00-01" Key="43" UniqueKey="49" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureMode" Address="0x00014104" Data="00-00-00-01" Key="43" UniqueKey="50" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="ExposureTimeAbs" Address="0x00014110" Data="00-00-EA-64" Key="44" UniqueKey="51" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="ExposureTimeAbs" Address="0x00014110" Data="00-00-27-11" Key="44" UniqueKey="51" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureAutoTarget" Address="0x00014124" Data="00-00-00-32" Key="45" UniqueKey="52" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureAutoAlg" Address="0x00014118" Data="00-00-00-00" Key="46" UniqueKey="53" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureAutoMin" Address="0x0001411C" Data="00-00-00-13" Key="47" UniqueKey="54" Flags="01-00-00-00"/>
@@ -10834,8 +10920,8 @@
 										<CameraRegisterChild Name="ExposureAutoAdjustTol" Address="0x00014130" Data="00-00-00-05" Key="51" UniqueKey="58" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="GainSelector" Address="0x00000000" Key="52" UniqueKey="59" Flags="01-00-00-01">
 											<CameraRegisterChild Name="Gain" Address="0x00014150" Key="53" UniqueKey="60" Flags="01-00-00-00"/>
-											<CameraRegisterChild Name="GainAuto" Address="0x00014144" Key="54" UniqueKey="61" Flags="01-00-00-00"/>
-											<CameraRegisterChild Name="GainRaw" Address="0x00014150" Key="53" UniqueKey="62" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="GainRaw" Address="0x00014150" Key="53" UniqueKey="61" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="GainAuto" Address="0x00014144" Key="54" UniqueKey="62" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
 										<CameraRegisterChild Name="GainAutoTarget" Address="0x0001415C" Data="00-00-00-32" Key="55" UniqueKey="64" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="GainAutoMin" Address="0x00014154" Data="00-00-00-00" Key="56" UniqueKey="65" Flags="01-00-00-00"/>
@@ -10858,76 +10944,75 @@
 										<CameraRegisterChild Name="Saturation" Address="0x00014314" Data="3F-80-00-00" Key="71" UniqueKey="82" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ColorTransformationMode" Address="0x0001432C" Data="00-00-00-00" Key="72" UniqueKey="83" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ColorTransformationValue" Address="0x00014334" Data="3F-80-00-00" Key="73" UniqueKey="84" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="ColorTransformationValue" Address="0x00014338" Data="00-00-00-00" Key="74" UniqueKey="85" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="LUTSelector" Address="0x00014374" Key="75" UniqueKey="86" Flags="01-00-00-00">
-											<CameraRegisterChild Name="LUTMode" Address="0x00014384" Key="76" UniqueKey="87" Flags="01-00-00-00"/>
-											<CameraRegisterChild Name="LUTEnable" Address="0x00014384" Key="76" UniqueKey="88" Flags="01-00-00-00"/>
-											<CameraRegisterChild Name="LUTIndex" Address="0x00014394" Key="77" UniqueKey="89" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="LUTSelector" Address="0x00014374" Key="74" UniqueKey="85" Flags="01-00-00-00">
+											<CameraRegisterChild Name="LUTMode" Address="0x00014384" Key="75" UniqueKey="86" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="LUTEnable" Address="0x00014384" Key="75" UniqueKey="87" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="LUTIndex" Address="0x00014394" Key="76" UniqueKey="88" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="LUTValue" Address="0x00014398" Data="00-00-0F-FF" Key="78" UniqueKey="91" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="SyncInSelector" Address="0x00000000" Key="79" UniqueKey="92" Flags="01-00-00-01">
-											<CameraRegisterChild Name="SyncInGlitchFilter" Address="0x000151D0" Key="80" UniqueKey="93" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="LUTValue" Address="0x00014398" Data="00-00-0F-FF" Key="77" UniqueKey="90" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="SyncInSelector" Address="0x00000000" Key="78" UniqueKey="91" Flags="01-00-00-01">
+											<CameraRegisterChild Name="SyncInGlitchFilter" Address="0x000151D0" Key="79" UniqueKey="92" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="SyncOutLevels" Address="0x00015114" Data="00-00-00-00" Key="81" UniqueKey="95" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="SyncOutSelector" Address="0x00000000" Key="82" UniqueKey="96" Flags="01-00-00-01">
-											<CameraRegisterChild Name="SyncOutPolarity" Address="0x0001514C" Key="83" UniqueKey="97" Flags="01-00-00-00"/>
-											<CameraRegisterChild Name="SyncOutSource" Address="0x0001514C" Key="83" UniqueKey="98" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="SyncOutLevels" Address="0x00015114" Data="00-00-00-00" Key="80" UniqueKey="94" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="SyncOutSelector" Address="0x00000000" Key="81" UniqueKey="95" Flags="01-00-00-01">
+											<CameraRegisterChild Name="SyncOutSource" Address="0x0001514C" Key="82" UniqueKey="96" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="SyncOutPolarity" Address="0x0001514C" Key="82" UniqueKey="97" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="SyncOutSelector" Address="0x00000000" Key="84" UniqueKey="100" Flags="01-00-00-01">
-											<CameraRegisterChild Name="SyncOutPolarity" Address="0x00015154" Key="85" UniqueKey="101" Flags="01-00-00-00"/>
-											<CameraRegisterChild Name="SyncOutSource" Address="0x00015154" Key="85" UniqueKey="102" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="SyncOutSelector" Address="0x00000000" Key="83" UniqueKey="99" Flags="01-00-00-01">
+											<CameraRegisterChild Name="SyncOutSource" Address="0x00015154" Key="84" UniqueKey="100" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="SyncOutPolarity" Address="0x00015154" Key="84" UniqueKey="101" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="SyncOutSelector" Address="0x00000000" Key="86" UniqueKey="104" Flags="01-00-00-01">
-											<CameraRegisterChild Name="SyncOutSource" Address="0x00015144" Key="87" UniqueKey="105" Flags="01-00-00-00"/>
-											<CameraRegisterChild Name="SyncOutPolarity" Address="0x00015144" Key="87" UniqueKey="106" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="SyncOutSelector" Address="0x00000000" Key="85" UniqueKey="103" Flags="01-00-00-01">
+											<CameraRegisterChild Name="SyncOutSource" Address="0x00015144" Key="86" UniqueKey="104" Flags="01-00-00-00"/>
+											<CameraRegisterChild Name="SyncOutPolarity" Address="0x00015144" Key="86" UniqueKey="105" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="StrobeSource" Address="0x00015174" Data="00-00-00-03" Key="88" UniqueKey="108" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="StrobeDurationMode" Address="0x00015174" Data="00-00-00-03" Key="88" UniqueKey="109" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="StrobeDelay" Address="0x00015178" Data="00-00-00-00" Key="89" UniqueKey="110" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="StrobeDuration" Address="0x0001517C" Data="00-00-00-00" Key="90" UniqueKey="111" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="91" UniqueKey="112" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="92" UniqueKey="113" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="StrobeSource" Address="0x00015174" Data="00-00-00-03" Key="87" UniqueKey="107" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="StrobeDurationMode" Address="0x00015174" Data="00-00-00-03" Key="87" UniqueKey="108" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="StrobeDelay" Address="0x00015178" Data="00-00-00-00" Key="88" UniqueKey="109" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="StrobeDuration" Address="0x0001517C" Data="00-00-00-00" Key="89" UniqueKey="110" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="90" UniqueKey="111" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="91" UniqueKey="112" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="93" UniqueKey="115" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="94" UniqueKey="116" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="92" UniqueKey="114" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="93" UniqueKey="115" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="95" UniqueKey="118" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="96" UniqueKey="119" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="94" UniqueKey="117" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="95" UniqueKey="118" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="97" UniqueKey="121" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="98" UniqueKey="122" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="96" UniqueKey="120" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="97" UniqueKey="121" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="99" UniqueKey="124" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="100" UniqueKey="125" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="98" UniqueKey="123" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="99" UniqueKey="124" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="101" UniqueKey="127" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="102" UniqueKey="128" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="100" UniqueKey="126" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="101" UniqueKey="127" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="103" UniqueKey="130" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="104" UniqueKey="131" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="102" UniqueKey="129" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="103" UniqueKey="130" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="105" UniqueKey="133" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="106" UniqueKey="134" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="104" UniqueKey="132" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="105" UniqueKey="133" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="107" UniqueKey="136" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="108" UniqueKey="137" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="106" UniqueKey="135" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="107" UniqueKey="136" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="109" UniqueKey="139" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="110" UniqueKey="140" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="108" UniqueKey="138" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="109" UniqueKey="139" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="111" UniqueKey="142" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="112" UniqueKey="143" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="110" UniqueKey="141" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="111" UniqueKey="142" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="113" UniqueKey="145" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="114" UniqueKey="146" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="112" UniqueKey="144" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="113" UniqueKey="145" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="115" UniqueKey="148" Flags="01-00-00-00">
-											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="116" UniqueKey="149" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventSelector" Address="0x00022020" Key="114" UniqueKey="147" Flags="01-00-00-00">
+											<CameraRegisterChild Name="EventNotification" Address="0x00022024" Key="115" UniqueKey="148" Flags="01-00-00-00"/>
 										</CameraRegisterChild>
-										<CameraRegisterChild Name="EventsEnable1" Address="0x00022018" Data="00-00-00-00" Key="117" UniqueKey="151" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="UserSetDefaultSelector" Address="0x00017108" Data="00-00-00-00" Key="118" UniqueKey="152" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="Action Group Mask" Address="0x00009804" Data="00-00-00-00" Key="119" UniqueKey="153" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="Action Group Key" Address="0x00009800" Data="00-00-00-00" Key="120" UniqueKey="154" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="EventsEnable1" Address="0x00022018" Data="00-00-00-00" Key="116" UniqueKey="150" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="UserSetDefaultSelector" Address="0x00017108" Data="00-00-00-00" Key="117" UniqueKey="151" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="Action Group Mask" Address="0x00009804" Data="00-00-00-00" Key="118" UniqueKey="152" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="Action Group Key" Address="0x00009800" Data="00-00-00-00" Key="119" UniqueKey="153" Flags="01-00-00-00"/>
 									</CameraRegister>
 								</InitCameraCommandsRoot>
 								<CameraInfoCache>
@@ -11171,7 +11256,7 @@
 								</Value>
 								<Value>
 									<Name>InitCameraCommands</Name>
-									<Data>3707000000000000770000000000000042cbdb1399998d428f386733fbaf00b13800000001000000000000001f0020000000000000000000496e697469616c697a6174696f6e20436f6d6d616e64732048656164657200496e697469616c697a6174696f6e20436f6d6d616e647320436f6d6d656e74006b000400020000001c00e80000001000000000000000000000000000000000000100690010004411010004000763394e0100680010005011010004000000000001006700100060110100040000000000010066001000005102000400000000000100650010000c5102000400000000000100640010001051020004000000000001006300100068110100040000000001010062001000d0340100040000000001010061001000d83401000400000000000100600010001035010004000000000101005f0010001835010004000000000001005e0010009035010004008000000101005d0010009835010004000000000001005c0010001034010004008000000001005b0010001834010004000000000001005a001000243401000400000000000100590010001c340100040000000000010058001000043101000400000000010100570010000831010004000000000101005600100038310100040000000e970100550010000c310100040000000000010054001000081101000400000000000100530010002811010004000000000001005200100084110100040000000001010051001000941101000400000000010100500010003421010004000000000001004f0010003821010004000000000001004e0010002021010004000108000901004d001000242101000400000002d801004c0010002821010004000000022001004b0010002c21010004000000000001004a00100030210100040000000000010049001000f0400100040000000000010048001000f4400100040000000000010047001000f84001000400000002d8010046001000fc400100040000000220010045001000044101000400000000010100440010001041010004000000ea6401004300100024410100040000000032010042001000184101000400000000000100410010001c4101000400000000130100400010002041010004000000c34f01003f0010002841010004000000006401003e0010002c41010004000000000001003d0010003041010004000000000501003c0010005041010004000000000001003b0010004441010004000000000101003a0010005c4101000400000000320100390010005441010004000000000001003800100058410100040000000190010037001000604101000400000000640100360010006441010004000000000001003500100068410100040000000005010034001000d04101000400000000100100330010006443010004003f80000001003200100094410100040000000100010031001000904101000400000000bf0100300010008441010004000000000101002f001000a041010004000000006401002e001000a841010004000000000501002d0010000843010004000000000001002c0010001443010004003f80000001002b0010002c43010004000000000001002a0010003443010004003f80000001002900100074430100040000000000010028001000844301000400000000000100270010009443010004000000000001002600100098430100040000000fff010025001000d0510100040000000000010024001000145101000400000000000100230010004c51010004000000000401002200100054510100040000000004010021001000445101000400000000040100200010007451010004000000000301001f0010007851010004000000000001001e0010007c51010004000000000001001d00100020200200040000009c4101001c0010002420020004000000000001001b00100020200200040000009c4201001a0010002420020004000000000001001900100020200200040000009c430100180010002420020004000000000001001700100020200200040000009c440100160010002420020004000000000001001500100020200200040000009c450100140010002420020004000000000001001300100020200200040000009c460100120010002420020004000000000001001100100020200200040000009c4a0100100010002420020004000000000001000f00100020200200040000009c4b01000e0010002420020004000000000001000d00100020200200040000009c5201000c0010002420020004000000000001000b00100020200200040000009c5301000a0010002420020004000000000001000900100020200200040000009c540100080010002420020004000000000001000700100020200200040000009c550100060010002420020004000000000001000500100020200200040000009c400100040010002420020004000000000001000300100018200200040000000000010002001000087101000400000000000100010010000498000004000000000001000000100000980000040000000000</Data>
+									<Data>3707000000000000770000000000000042cbdb1399998d428f386733fbaf00b13800000001000000000000001f0020000000000000000000496e697469616c697a6174696f6e20436f6d6d616e64732048656164657200496e697469616c697a6174696f6e20436f6d6d616e647320436f6d6d656e74006b000400020000001c00e80000001000000000000000000000000000000000000100690010004411010004000763394e0100680010005011010004000000000001006700100060110100040000000000010066001000005102000400000000000100650010000c5102000400000000000100640010001051020004000000000001006300100068110100040000000001010062001000d0340100040000000001010061001000d83401000400000000000100600010001035010004000000000101005f0010001835010004000000000001005e0010009035010004008000000101005d0010009835010004000000000001005c0010001c34010004000000000001005b0010001034010004008000000001005a0010001834010004000000000001005900100024340100040000000000010058001000043101000400000000010100570010000831010004000000000101005600100038310100040000000e970100550010000c310100040000000000010054001000081101000400000000000100530010002811010004000000000001005200100084110100040000000001010051001000941101000400000000010100500010003421010004000000000001004f0010003821010004000000000001004e0010002021010004000108000901004d001000242101000400000002d801004c0010002821010004000000022001004b0010002c21010004000000000001004a00100030210100040000000000010049001000f0400100040000000000010048001000f4400100040000000000010047001000f84001000400000002d8010046001000fc40010004000000022001004500100004410100040000000001010044001000104101000400000186a101004300100024410100040000000032010042001000184101000400000000000100410010001c4101000400000000130100400010002041010004000000c34f01003f0010002841010004000000006401003e0010002c41010004000000000001003d0010003041010004000000000501003c0010005041010004000000000001003b0010004441010004000000000101003a0010005c4101000400000000320100390010005441010004000000000001003800100058410100040000000190010037001000604101000400000000640100360010006441010004000000000001003500100068410100040000000005010034001000d04101000400000000100100330010006443010004003f800000010032001000944101000400000000f5010031001000904101000400000000e10100300010008441010004000000000101002f001000a041010004000000006401002e001000a841010004000000000501002d0010000843010004000000000001002c0010001443010004003f80000001002b0010002c43010004000000000001002a0010003443010004003f80000001002900100074430100040000000000010028001000844301000400000000000100270010009443010004000000000001002600100098430100040000000fff010025001000d0510100040000000000010024001000145101000400000000000100230010004c51010004000000000401002200100054510100040000000004010021001000445101000400000000040100200010007451010004000000000301001f0010007851010004000000000001001e0010007c51010004000000000001001d00100020200200040000009c4101001c0010002420020004000000000001001b00100020200200040000009c4201001a0010002420020004000000000001001900100020200200040000009c430100180010002420020004000000000001001700100020200200040000009c440100160010002420020004000000000001001500100020200200040000009c450100140010002420020004000000000001001300100020200200040000009c460100120010002420020004000000000001001100100020200200040000009c4a0100100010002420020004000000000001000f00100020200200040000009c4b01000e0010002420020004000000000001000d00100020200200040000009c5201000c0010002420020004000000000001000b00100020200200040000009c5301000a0010002420020004000000000001000900100020200200040000009c540100080010002420020004000000000001000700100020200200040000009c550100060010002420020004000000000001000500100020200200040000009c400100040010002420020004000000000001000300100018200200040000000000010002001000087101000400000000000100010010000498000004000000000001000000100000980000040000000000</Data>
 								</Value>
 								<Value>
 									<Name>InitializationTimeout</Name>
@@ -11882,11 +11967,11 @@
 								</Parameter>
 								<Parameter HideParameter="true">
 									<Name>CalibPatternRef</Name>
-									<BitSize>0</BitSize>
+									<BitSize>5184</BitSize>
 									<BaseType GUID="{18071995-0000-0000-0000-00000000000D}">REAL</BaseType>
 									<ArrayInfo>
 										<LBound>0</LBound>
-										<Elements Min="0" MaxUnbounded="true">0</Elements>
+										<Elements Min="0" MaxUnbounded="true">162</Elements>
 									</ArrayInfo>
 									<PTCID>#x00000006</PTCID>
 									<ContextId>1</ContextId>
@@ -11925,7 +12010,7 @@
 							<ParameterValues>
 								<Value>
 									<Name>CameraMatrix[0][0]</Name>
-									<Value>0</Value>
+									<Value>1</Value>
 								</Value>
 								<Value>
 									<Name>CameraMatrix[0][1]</Name>
@@ -11941,7 +12026,7 @@
 								</Value>
 								<Value>
 									<Name>CameraMatrix[1][1]</Name>
-									<Value>0</Value>
+									<Value>1</Value>
 								</Value>
 								<Value>
 									<Name>CameraMatrix[1][2]</Name>
@@ -11957,7 +12042,7 @@
 								</Value>
 								<Value>
 									<Name>CameraMatrix[2][2]</Name>
-									<Value>0</Value>
+									<Value>1</Value>
 								</Value>
 								<Value>
 									<Name>DistortionCoefficients[0]</Name>
@@ -11993,7 +12078,7 @@
 								</Value>
 								<Value>
 									<Name>RotationMatrix[0][0]</Name>
-									<Value>0</Value>
+									<Value>1</Value>
 								</Value>
 								<Value>
 									<Name>RotationMatrix[0][1]</Name>
@@ -12009,7 +12094,7 @@
 								</Value>
 								<Value>
 									<Name>RotationMatrix[1][1]</Name>
-									<Value>0</Value>
+									<Value>1</Value>
 								</Value>
 								<Value>
 									<Name>RotationMatrix[1][2]</Name>
@@ -12025,7 +12110,7 @@
 								</Value>
 								<Value>
 									<Name>RotationMatrix[2][2]</Name>
-									<Value>0</Value>
+									<Value>1</Value>
 								</Value>
 								<Value>
 									<Name>TranslationVector[0]</Name>
@@ -12037,6 +12122,654 @@
 								</Value>
 								<Value>
 									<Name>TranslationVector[2]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[0]</Name>
+									<Value>-4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[1]</Name>
+									<Value>-2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[2]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[3]</Name>
+									<Value>-3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[4]</Name>
+									<Value>-2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[5]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[6]</Name>
+									<Value>-2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[7]</Name>
+									<Value>-2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[8]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[9]</Name>
+									<Value>-1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[10]</Name>
+									<Value>-2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[11]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[12]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[13]</Name>
+									<Value>-2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[14]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[15]</Name>
+									<Value>1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[16]</Name>
+									<Value>-2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[17]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[18]</Name>
+									<Value>2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[19]</Name>
+									<Value>-2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[20]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[21]</Name>
+									<Value>3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[22]</Name>
+									<Value>-2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[23]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[24]</Name>
+									<Value>4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[25]</Name>
+									<Value>-2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[26]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[27]</Name>
+									<Value>-4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[28]</Name>
+									<Value>-1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[29]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[30]</Name>
+									<Value>-3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[31]</Name>
+									<Value>-1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[32]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[33]</Name>
+									<Value>-2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[34]</Name>
+									<Value>-1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[35]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[36]</Name>
+									<Value>-1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[37]</Name>
+									<Value>-1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[38]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[39]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[40]</Name>
+									<Value>-1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[41]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[42]</Name>
+									<Value>1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[43]</Name>
+									<Value>-1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[44]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[45]</Name>
+									<Value>2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[46]</Name>
+									<Value>-1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[47]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[48]</Name>
+									<Value>3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[49]</Name>
+									<Value>-1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[50]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[51]</Name>
+									<Value>4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[52]</Name>
+									<Value>-1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[53]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[54]</Name>
+									<Value>-4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[55]</Name>
+									<Value>-0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[56]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[57]</Name>
+									<Value>-3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[58]</Name>
+									<Value>-0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[59]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[60]</Name>
+									<Value>-2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[61]</Name>
+									<Value>-0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[62]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[63]</Name>
+									<Value>-1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[64]</Name>
+									<Value>-0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[65]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[66]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[67]</Name>
+									<Value>-0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[68]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[69]</Name>
+									<Value>1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[70]</Name>
+									<Value>-0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[71]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[72]</Name>
+									<Value>2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[73]</Name>
+									<Value>-0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[74]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[75]</Name>
+									<Value>3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[76]</Name>
+									<Value>-0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[77]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[78]</Name>
+									<Value>4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[79]</Name>
+									<Value>-0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[80]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[81]</Name>
+									<Value>-4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[82]</Name>
+									<Value>0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[83]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[84]</Name>
+									<Value>-3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[85]</Name>
+									<Value>0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[86]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[87]</Name>
+									<Value>-2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[88]</Name>
+									<Value>0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[89]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[90]</Name>
+									<Value>-1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[91]</Name>
+									<Value>0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[92]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[93]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[94]</Name>
+									<Value>0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[95]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[96]</Name>
+									<Value>1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[97]</Name>
+									<Value>0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[98]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[99]</Name>
+									<Value>2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[100]</Name>
+									<Value>0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[101]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[102]</Name>
+									<Value>3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[103]</Name>
+									<Value>0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[104]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[105]</Name>
+									<Value>4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[106]</Name>
+									<Value>0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[107]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[108]</Name>
+									<Value>-4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[109]</Name>
+									<Value>1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[110]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[111]</Name>
+									<Value>-3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[112]</Name>
+									<Value>1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[113]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[114]</Name>
+									<Value>-2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[115]</Name>
+									<Value>1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[116]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[117]</Name>
+									<Value>-1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[118]</Name>
+									<Value>1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[119]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[120]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[121]</Name>
+									<Value>1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[122]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[123]</Name>
+									<Value>1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[124]</Name>
+									<Value>1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[125]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[126]</Name>
+									<Value>2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[127]</Name>
+									<Value>1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[128]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[129]</Name>
+									<Value>3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[130]</Name>
+									<Value>1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[131]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[132]</Name>
+									<Value>4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[133]</Name>
+									<Value>1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[134]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[135]</Name>
+									<Value>-4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[136]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[137]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[138]</Name>
+									<Value>-3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[139]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[140]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[141]</Name>
+									<Value>-2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[142]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[143]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[144]</Name>
+									<Value>-1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[145]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[146]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[147]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[148]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[149]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[150]</Name>
+									<Value>1</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[151]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[152]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[153]</Name>
+									<Value>2</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[154]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[155]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[156]</Name>
+									<Value>3</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[157]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[158]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[159]</Name>
+									<Value>4</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[160]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[161]</Name>
 									<Value>0</Value>
 								</Value>
 								<Value>
