@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <GVL Name="GVL" Id="{c0ea9552-e301-414a-bab7-d38301bde674}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	// Axis
+	Axis: AXIS_REF;
+	
+	// Function blocks
+	fbPowerAxis: MC_Power;
+	fbMoveContinuous: MC_MoveContinuousRelative;
+	
+	// Parameters
+	
+	PowerOverride	: LREAL := 100;
+	
+	// Status
+	
+	Power 		  : ST_MC_Status;
+	MoveRelative  : ST_MC_Status;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

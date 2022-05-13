@@ -33,25 +33,25 @@ END_IF;*)
 //speed := 20000;
 
 	
-	(*timer_tof(IN:= enable, PT:= T#5S, Q=> motor_bediening, ET=> current_time);
+(*timer_tof(IN:= enable, PT:= T#5S, Q=> motor_bediening, ET=> current_time);
 	
-	IF current_time < T#2.5S
-		THEN speed:= -20000;
-	END_IF;*)
+IF current_time < T#2.5S
+	THEN speed:= -20000;
+END_IF;*)
 	
-	timer_ton(IN:= NOT timer_ton.Q, PT:= T#10S);
+timer_ton(IN:= NOT timer_ton.Q, PT:= T#10S);
 blink_links := timer_ton.ET > T#5S;
 blink_rechts := timer_ton.ET < T#5S;
 
 motor_bediening := (enable AND blink_links) OR (enable AND blink_rechts);
 
-	IF timer_ton.ET < T#5S
-		THEN speed:= iSpeed;
-	END_IF;
+IF timer_ton.ET < T#5S
+	THEN speed:= iSpeed;
+END_IF;
 	
-	IF timer_ton.ET > T#5S
-		THEN speed:= (iSpeed);
-	END_IF;]]></ST>
+IF timer_ton.ET > T#5S
+	THEN speed:= -iSpeed;
+END_IF;]]></ST>
       </Implementation>
     </Action>
     <LineIds Name="MAIN">
