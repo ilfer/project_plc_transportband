@@ -1,13 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{cf99f84a-6569-4efc-8acc-1393748038da}">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="MAIN" Id="{cf99f84a-6569-4efc-8acc-1393748038da}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	hr: HRESULT;
+	fbCamera: FB_VN_SimpleCameraControl;
+	eState: ETcVnCameraState;
+	
+	ipImageIn: ITcVnImage;
+	ipImageInDisp: ITcVnDisplayableImage;
 END_VAR
-]]>
-    </Declaration>
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[eState:= fbCamera.GetState();
+
+CASE eState OF 
+	TCVN_CS_INITIAL, TCVN_CS_OPENING, TCVN_CS_OPENED, TCVN_CS_STARTACQUISITION:
+	hr:=fbCamera.StartAcquisition();
+	
+	TCVN_CS_ACQUIRING:
+	hr:= fbCamera.GetCurrentImage(ipImageIn);
+	hr:= F_VN_CopyIntoDisplayableImage(ipImageIn, ipImageInDisp, hr);
+	
+	TCVN_CS_ERROR:
+	hr:= fbCamera.Reset();
+	
+	
+END_CASE]]></ST>
     </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="20" Count="2" />
+      <LineId Id="24" Count="3" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="16" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
