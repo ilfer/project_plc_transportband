@@ -3373,21 +3373,6 @@
 							<CycleTime>10000000</CycleTime>
 						</Context>
 					</Contexts>
-					<InitSymbols>
-						<InitSymbol>
-							<Name>MAIN.fbCamera.oidITcVnImageProvider</Name>
-							<Type GUID="{18071995-0000-0000-0000-00000000000F}">OTCID</Type>
-							<Comment><![CDATA[ Internal reference to the corresponding TcVnImageProvider TcCOM module ID, which needs to be set via TC init symbol. ]]></Comment>
-							<AreaNo>#x00000003</AreaNo>
-							<Data>80000101</Data>
-							<Properties>
-								<Property>
-									<Name>TcCategoryOID</Name>
-									<Value>TcVnImageProvider</Value>
-								</Property>
-							</Properties>
-						</InitSymbol>
-					</InitSymbols>
 					<TaskPouOids>
 						<TaskPouOid Prio="20" OTCID="#x08502001"/>
 					</TaskPouOids>
@@ -3545,7 +3530,7 @@
 										<AutoCalcMaxPacketNumber Type="System.Boolean">True</AutoCalcMaxPacketNumber>
 										<CommunicationTimeout Type="System.Int32">3000</CommunicationTimeout>
 										<Visibility Type="System.String">Beginner</Visibility>
-										<ExpandedNodes Type="System.String">Root;GenApi;Acquisition;Controls;Exposure</ExpandedNodes>
+										<ExpandedNodes Type="System.String">Root;TcCOM Parameters;Image Acquisition Module;GVCP Module;GVSP Module;GigE Vision;GenApi;Info;DeviceStatus;GigE;StreamHold;Timestamp;PTP;Acquisition;Trigger;TriggerSelector;ImageMode;ImageFormat;Controls;DSPSubregion;Exposure;ExposureAutoControl;GainControl;GainSelector;GainAutoControl;BlackLevelControl;Whitebalance;BalanceRatioSelector;BalanceWhiteAutoControl;Color Transformation Control;LUTControl;LUTSelector;LUTIndex;IO;SyncIn;SyncInSelector;SyncOut;SyncOutSelector;Strobe;EventControl;EventSelector;EventID;SavedUserSets;UserSetSelector;Action Control;Action Selector</ExpandedNodes>
 										<useSelector Type="System.Boolean">True</useSelector>
 										<UsePacketDelayInConfigMode Type="System.Boolean">True</UsePacketDelayInConfigMode>
 									</CameraConfig>
@@ -9750,7 +9735,7 @@
 											<RegisterValue>00-00-00-01</RegisterValue>
 										</Register>
 										<Register Address="0x00024108">
-											<RegisterValue>42-41-3F-7D</RegisterValue>
+											<RegisterValue>42-62-5F-3B</RegisterValue>
 										</Register>
 										<Register Address="0x00024100">
 											<RegisterValue>00-00-00-02</RegisterValue>
@@ -9774,10 +9759,10 @@
 											<RegisterValue>3B-9A-CA-00</RegisterValue>
 										</Register>
 										<Register Address="0x0000094C">
-											<RegisterValue>2F-55-0A-C0</RegisterValue>
+											<RegisterValue>9A-56-96-64</RegisterValue>
 										</Register>
 										<Register Address="0x00000948">
-											<RegisterValue>00-00-00-10</RegisterValue>
+											<RegisterValue>00-00-00-73</RegisterValue>
 										</Register>
 										<Register Address="0x00025000">
 											<RegisterValue>00-00-00-01</RegisterValue>
@@ -9871,7 +9856,7 @@
 											<RegisterValue>00-00-0D-68</RegisterValue>
 										</Register>
 										<Register Address="0x0001313C">
-											<RegisterValue>00-01-87-03</RegisterValue>
+											<RegisterValue>00-00-4E-82</RegisterValue>
 										</Register>
 										<Register Address="0x00013134">
 											<RegisterValue>01-EB-85-1E</RegisterValue>
@@ -9979,7 +9964,7 @@
 											<RegisterValue>00-00-00-1E</RegisterValue>
 										</Register>
 										<Register Address="0x00014110">
-											<RegisterValue>00-01-86-A1</RegisterValue>
+											<RegisterValue>00-00-4E-20</RegisterValue>
 										</Register>
 										<Register Address="0x00014108">
 											<RegisterValue>00-00-00-13</RegisterValue>
@@ -9988,7 +9973,7 @@
 											<RegisterValue>00-00-00-13</RegisterValue>
 										</Register>
 										<Register Address="0x00014120">
-											<RegisterValue>00-00-C3-4F</RegisterValue>
+											<RegisterValue>00-07-A1-1F</RegisterValue>
 										</Register>
 										<Register Address="0x0001410C">
 											<RegisterValue>05-1E-B8-4F</RegisterValue>
@@ -10077,11 +10062,11 @@
 											<RegisterValue>40-80-00-00</RegisterValue>
 										</Register>
 										<Register Address="0x00014190">
-											<RegisterValue>00-00-00-E1</RegisterValue>
+											<RegisterValue>00-00-00-E9</RegisterValue>
 										</Register>
 										<Register Address="0x00014190">
 											<Selector SelectorName="BalanceRatioSelector">0</Selector>
-											<RegisterValue>00-00-00-E1</RegisterValue>
+											<RegisterValue>00-00-00-E9</RegisterValue>
 										</Register>
 										<Register Address="0x00014188">
 											<RegisterValue>00-00-00-50</RegisterValue>
@@ -10384,11 +10369,11 @@
 											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
 										<Register Address="0x00014194">
-											<RegisterValue>00-00-00-F5</RegisterValue>
+											<RegisterValue>00-00-00-B6</RegisterValue>
 										</Register>
 										<Register Address="0x00014194">
 											<Selector SelectorName="BalanceRatioSelector">1</Selector>
-											<RegisterValue>00-00-00-F5</RegisterValue>
+											<RegisterValue>00-00-00-B6</RegisterValue>
 										</Register>
 										<Register Address="0x0001514C">
 											<RegisterValue>00-00-00-04</RegisterValue>
@@ -10403,24 +10388,6 @@
 										<Register Address="0x00015154">
 											<Selector SelectorName="SyncOutSelector">2</Selector>
 											<RegisterValue>00-00-00-04</RegisterValue>
-										</Register>
-										<Register Address="0x00000024">
-											<RegisterValue>A9-FE-FB-AE</RegisterValue>
-										</Register>
-										<Register Address="0x00000034">
-											<RegisterValue>FF-FF-00-00</RegisterValue>
-										</Register>
-										<Register Address="0x00000044">
-											<RegisterValue>00-00-00-00</RegisterValue>
-										</Register>
-										<Register Address="0x0000064C">
-											<RegisterValue>A9-FE-7B-2D</RegisterValue>
-										</Register>
-										<Register Address="0x0000065C">
-											<RegisterValue>FF-FF-00-00</RegisterValue>
-										</Register>
-										<Register Address="0x0000066C">
-											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
 										<Register Address="0x00000000">
 											<RegisterValue>00-01-00-02</RegisterValue>
@@ -10494,8 +10461,26 @@
 										<Register Address="0x0000000C">
 											<RegisterValue>31-5C-E0-41</RegisterValue>
 										</Register>
+										<Register Address="0x00000024">
+											<RegisterValue>A9-FE-FB-AE</RegisterValue>
+										</Register>
+										<Register Address="0x00000034">
+											<RegisterValue>FF-FF-00-00</RegisterValue>
+										</Register>
+										<Register Address="0x00000044">
+											<RegisterValue>00-00-00-00</RegisterValue>
+										</Register>
 										<Register Address="0x00000014">
 											<RegisterValue>00-00-00-06</RegisterValue>
+										</Register>
+										<Register Address="0x0000064C">
+											<RegisterValue>A9-FE-7B-2D</RegisterValue>
+										</Register>
+										<Register Address="0x0000065C">
+											<RegisterValue>FF-FF-00-00</RegisterValue>
+										</Register>
+										<Register Address="0x0000066C">
+											<RegisterValue>00-00-00-00</RegisterValue>
 										</Register>
 									</RegisterValues>
 									<MetaData>
@@ -10656,7 +10641,7 @@
 											<RegisterValue>00-00-00-01</RegisterValue>
 										</Register>
 										<Register Address="0x00014110">
-											<RegisterValue>00-01-86-A1</RegisterValue>
+											<RegisterValue>00-00-4E-20</RegisterValue>
 										</Register>
 										<Register Address="0x00014124">
 											<RegisterValue>00-00-00-32</RegisterValue>
@@ -10910,11 +10895,11 @@
 										<CameraRegisterChild Name="DSPSubregionBottom" Address="0x000140FC" Data="00-00-02-20" Key="42" UniqueKey="48" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureAuto" Address="0x00014104" Data="00-00-00-01" Key="43" UniqueKey="49" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureMode" Address="0x00014104" Data="00-00-00-01" Key="43" UniqueKey="50" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="ExposureTimeAbs" Address="0x00014110" Data="00-00-27-11" Key="44" UniqueKey="51" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="ExposureTimeAbs" Address="0x00014110" Data="00-00-3A-99" Key="44" UniqueKey="51" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureAutoTarget" Address="0x00014124" Data="00-00-00-32" Key="45" UniqueKey="52" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureAutoAlg" Address="0x00014118" Data="00-00-00-00" Key="46" UniqueKey="53" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureAutoMin" Address="0x0001411C" Data="00-00-00-13" Key="47" UniqueKey="54" Flags="01-00-00-00"/>
-										<CameraRegisterChild Name="ExposureAutoMax" Address="0x00014120" Data="00-00-C3-4F" Key="48" UniqueKey="55" Flags="01-00-00-00"/>
+										<CameraRegisterChild Name="ExposureAutoMax" Address="0x00014120" Data="00-07-A1-1F" Key="48" UniqueKey="55" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureAutoRate" Address="0x00014128" Data="00-00-00-64" Key="49" UniqueKey="56" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureAutoOutliers" Address="0x0001412C" Data="00-00-00-00" Key="50" UniqueKey="57" Flags="01-00-00-00"/>
 										<CameraRegisterChild Name="ExposureAutoAdjustTol" Address="0x00014130" Data="00-00-00-05" Key="51" UniqueKey="58" Flags="01-00-00-00"/>
@@ -11256,7 +11241,7 @@
 								</Value>
 								<Value>
 									<Name>InitCameraCommands</Name>
-									<Data>3707000000000000770000000000000042cbdb1399998d428f386733fbaf00b13800000001000000000000001f0020000000000000000000496e697469616c697a6174696f6e20436f6d6d616e64732048656164657200496e697469616c697a6174696f6e20436f6d6d616e647320436f6d6d656e74006b000400020000001c00e80000001000000000000000000000000000000000000100690010004411010004000763394e0100680010005011010004000000000001006700100060110100040000000000010066001000005102000400000000000100650010000c5102000400000000000100640010001051020004000000000001006300100068110100040000000001010062001000d0340100040000000001010061001000d83401000400000000000100600010001035010004000000000101005f0010001835010004000000000001005e0010009035010004008000000101005d0010009835010004000000000001005c0010001c34010004000000000001005b0010001034010004008000000001005a0010001834010004000000000001005900100024340100040000000000010058001000043101000400000000010100570010000831010004000000000101005600100038310100040000000e970100550010000c310100040000000000010054001000081101000400000000000100530010002811010004000000000001005200100084110100040000000001010051001000941101000400000000010100500010003421010004000000000001004f0010003821010004000000000001004e0010002021010004000108000901004d001000242101000400000002d801004c0010002821010004000000022001004b0010002c21010004000000000001004a00100030210100040000000000010049001000f0400100040000000000010048001000f4400100040000000000010047001000f84001000400000002d8010046001000fc40010004000000022001004500100004410100040000000001010044001000104101000400000186a101004300100024410100040000000032010042001000184101000400000000000100410010001c4101000400000000130100400010002041010004000000c34f01003f0010002841010004000000006401003e0010002c41010004000000000001003d0010003041010004000000000501003c0010005041010004000000000001003b0010004441010004000000000101003a0010005c4101000400000000320100390010005441010004000000000001003800100058410100040000000190010037001000604101000400000000640100360010006441010004000000000001003500100068410100040000000005010034001000d04101000400000000100100330010006443010004003f800000010032001000944101000400000000f5010031001000904101000400000000e10100300010008441010004000000000101002f001000a041010004000000006401002e001000a841010004000000000501002d0010000843010004000000000001002c0010001443010004003f80000001002b0010002c43010004000000000001002a0010003443010004003f80000001002900100074430100040000000000010028001000844301000400000000000100270010009443010004000000000001002600100098430100040000000fff010025001000d0510100040000000000010024001000145101000400000000000100230010004c51010004000000000401002200100054510100040000000004010021001000445101000400000000040100200010007451010004000000000301001f0010007851010004000000000001001e0010007c51010004000000000001001d00100020200200040000009c4101001c0010002420020004000000000001001b00100020200200040000009c4201001a0010002420020004000000000001001900100020200200040000009c430100180010002420020004000000000001001700100020200200040000009c440100160010002420020004000000000001001500100020200200040000009c450100140010002420020004000000000001001300100020200200040000009c460100120010002420020004000000000001001100100020200200040000009c4a0100100010002420020004000000000001000f00100020200200040000009c4b01000e0010002420020004000000000001000d00100020200200040000009c5201000c0010002420020004000000000001000b00100020200200040000009c5301000a0010002420020004000000000001000900100020200200040000009c540100080010002420020004000000000001000700100020200200040000009c550100060010002420020004000000000001000500100020200200040000009c400100040010002420020004000000000001000300100018200200040000000000010002001000087101000400000000000100010010000498000004000000000001000000100000980000040000000000</Data>
+									<Data>3707000000000000770000000000000042cbdb1399998d428f386733fbaf00b13800000001000000000000001f0020000000000000000000496e697469616c697a6174696f6e20436f6d6d616e64732048656164657200496e697469616c697a6174696f6e20436f6d6d616e647320436f6d6d656e74006b000400020000001c00e80000001000000000000000000000000000000000000100690010004411010004000763394e0100680010005011010004000000000001006700100060110100040000000000010066001000005102000400000000000100650010000c5102000400000000000100640010001051020004000000000001006300100068110100040000000001010062001000d0340100040000000001010061001000d83401000400000000000100600010001035010004000000000101005f0010001835010004000000000001005e0010009035010004008000000101005d0010009835010004000000000001005c0010001c34010004000000000001005b0010001034010004008000000001005a0010001834010004000000000001005900100024340100040000000000010058001000043101000400000000010100570010000831010004000000000101005600100038310100040000000e970100550010000c310100040000000000010054001000081101000400000000000100530010002811010004000000000001005200100084110100040000000001010051001000941101000400000000010100500010003421010004000000000001004f0010003821010004000000000001004e0010002021010004000108000901004d001000242101000400000002d801004c0010002821010004000000022001004b0010002c21010004000000000001004a00100030210100040000000000010049001000f0400100040000000000010048001000f4400100040000000000010047001000f84001000400000002d8010046001000fc4001000400000002200100450010000441010004000000000101004400100010410100040000004e2001004300100024410100040000000032010042001000184101000400000000000100410010001c4101000400000000130100400010002041010004000007a11f01003f0010002841010004000000006401003e0010002c41010004000000000001003d0010003041010004000000000501003c0010005041010004000000000001003b0010004441010004000000000101003a0010005c4101000400000000320100390010005441010004000000000001003800100058410100040000000190010037001000604101000400000000640100360010006441010004000000000001003500100068410100040000000005010034001000d04101000400000000100100330010006443010004003f800000010032001000944101000400000000b6010031001000904101000400000000e90100300010008441010004000000000101002f001000a041010004000000006401002e001000a841010004000000000501002d0010000843010004000000000001002c0010001443010004003f80000001002b0010002c43010004000000000001002a0010003443010004003f80000001002900100074430100040000000000010028001000844301000400000000000100270010009443010004000000000001002600100098430100040000000fff010025001000d0510100040000000000010024001000145101000400000000000100230010004c51010004000000000401002200100054510100040000000004010021001000445101000400000000040100200010007451010004000000000301001f0010007851010004000000000001001e0010007c51010004000000000001001d00100020200200040000009c4101001c0010002420020004000000000001001b00100020200200040000009c4201001a0010002420020004000000000001001900100020200200040000009c430100180010002420020004000000000001001700100020200200040000009c440100160010002420020004000000000001001500100020200200040000009c450100140010002420020004000000000001001300100020200200040000009c460100120010002420020004000000000001001100100020200200040000009c4a0100100010002420020004000000000001000f00100020200200040000009c4b01000e0010002420020004000000000001000d00100020200200040000009c5201000c0010002420020004000000000001000b00100020200200040000009c5301000a0010002420020004000000000001000900100020200200040000009c540100080010002420020004000000000001000700100020200200040000009c550100060010002420020004000000000001000500100020200200040000009c400100040010002420020004000000000001000300100018200200040000000000010002001000087101000400000000000100010010000498000004000000000001000000100000980000040000000000</Data>
 								</Value>
 								<Value>
 									<Name>InitializationTimeout</Name>
@@ -11967,11 +11952,11 @@
 								</Parameter>
 								<Parameter HideParameter="true">
 									<Name>CalibPatternRef</Name>
-									<BitSize>5184</BitSize>
+									<BitSize>5760</BitSize>
 									<BaseType GUID="{18071995-0000-0000-0000-00000000000D}">REAL</BaseType>
 									<ArrayInfo>
 										<LBound>0</LBound>
-										<Elements Min="0" MaxUnbounded="true">162</Elements>
+										<Elements Min="0" MaxUnbounded="true">180</Elements>
 									</ArrayInfo>
 									<PTCID>#x00000006</PTCID>
 									<ContextId>1</ContextId>
@@ -12126,7 +12111,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[0]</Name>
-									<Value>-4</Value>
+									<Value>-9.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[1]</Name>
@@ -12138,7 +12123,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[3]</Name>
-									<Value>-3</Value>
+									<Value>-7.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[4]</Name>
@@ -12150,7 +12135,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[6]</Name>
-									<Value>-2</Value>
+									<Value>-5.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[7]</Name>
@@ -12162,7 +12147,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[9]</Name>
-									<Value>-1</Value>
+									<Value>-3.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[10]</Name>
@@ -12174,7 +12159,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[12]</Name>
-									<Value>0</Value>
+									<Value>-1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[13]</Name>
@@ -12186,7 +12171,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[15]</Name>
-									<Value>1</Value>
+									<Value>0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[16]</Name>
@@ -12198,7 +12183,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[18]</Name>
-									<Value>2</Value>
+									<Value>2.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[19]</Name>
@@ -12210,7 +12195,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[21]</Name>
-									<Value>3</Value>
+									<Value>4.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[22]</Name>
@@ -12222,7 +12207,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[24]</Name>
-									<Value>4</Value>
+									<Value>6.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[25]</Name>
@@ -12234,11 +12219,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[27]</Name>
-									<Value>-4</Value>
+									<Value>8.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[28]</Name>
-									<Value>-1.5</Value>
+									<Value>-2.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[29]</Name>
@@ -12246,7 +12231,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[30]</Name>
-									<Value>-3</Value>
+									<Value>-8.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[31]</Name>
@@ -12258,7 +12243,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[33]</Name>
-									<Value>-2</Value>
+									<Value>-6.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[34]</Name>
@@ -12270,7 +12255,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[36]</Name>
-									<Value>-1</Value>
+									<Value>-4.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[37]</Name>
@@ -12282,7 +12267,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[39]</Name>
-									<Value>0</Value>
+									<Value>-2.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[40]</Name>
@@ -12294,7 +12279,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[42]</Name>
-									<Value>1</Value>
+									<Value>-0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[43]</Name>
@@ -12306,7 +12291,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[45]</Name>
-									<Value>2</Value>
+									<Value>1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[46]</Name>
@@ -12318,7 +12303,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[48]</Name>
-									<Value>3</Value>
+									<Value>3.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[49]</Name>
@@ -12330,7 +12315,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[51]</Name>
-									<Value>4</Value>
+									<Value>5.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[52]</Name>
@@ -12342,11 +12327,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[54]</Name>
-									<Value>-4</Value>
+									<Value>7.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[55]</Name>
-									<Value>-0.5</Value>
+									<Value>-1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[56]</Name>
@@ -12354,11 +12339,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[57]</Name>
-									<Value>-3</Value>
+									<Value>9.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[58]</Name>
-									<Value>-0.5</Value>
+									<Value>-1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[59]</Name>
@@ -12366,7 +12351,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[60]</Name>
-									<Value>-2</Value>
+									<Value>-9.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[61]</Name>
@@ -12378,7 +12363,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[63]</Name>
-									<Value>-1</Value>
+									<Value>-7.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[64]</Name>
@@ -12390,7 +12375,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[66]</Name>
-									<Value>0</Value>
+									<Value>-5.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[67]</Name>
@@ -12402,7 +12387,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[69]</Name>
-									<Value>1</Value>
+									<Value>-3.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[70]</Name>
@@ -12414,7 +12399,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[72]</Name>
-									<Value>2</Value>
+									<Value>-1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[73]</Name>
@@ -12426,7 +12411,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[75]</Name>
-									<Value>3</Value>
+									<Value>0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[76]</Name>
@@ -12438,7 +12423,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[78]</Name>
-									<Value>4</Value>
+									<Value>2.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[79]</Name>
@@ -12450,11 +12435,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[81]</Name>
-									<Value>-4</Value>
+									<Value>4.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[82]</Name>
-									<Value>0.5</Value>
+									<Value>-0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[83]</Name>
@@ -12462,11 +12447,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[84]</Name>
-									<Value>-3</Value>
+									<Value>6.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[85]</Name>
-									<Value>0.5</Value>
+									<Value>-0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[86]</Name>
@@ -12474,11 +12459,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[87]</Name>
-									<Value>-2</Value>
+									<Value>8.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[88]</Name>
-									<Value>0.5</Value>
+									<Value>-0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[89]</Name>
@@ -12486,7 +12471,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[90]</Name>
-									<Value>-1</Value>
+									<Value>-8.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[91]</Name>
@@ -12498,7 +12483,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[93]</Name>
-									<Value>0</Value>
+									<Value>-6.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[94]</Name>
@@ -12510,7 +12495,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[96]</Name>
-									<Value>1</Value>
+									<Value>-4.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[97]</Name>
@@ -12522,7 +12507,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[99]</Name>
-									<Value>2</Value>
+									<Value>-2.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[100]</Name>
@@ -12534,7 +12519,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[102]</Name>
-									<Value>3</Value>
+									<Value>-0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[103]</Name>
@@ -12546,7 +12531,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[105]</Name>
-									<Value>4</Value>
+									<Value>1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[106]</Name>
@@ -12558,11 +12543,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[108]</Name>
-									<Value>-4</Value>
+									<Value>3.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[109]</Name>
-									<Value>1.5</Value>
+									<Value>0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[110]</Name>
@@ -12570,11 +12555,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[111]</Name>
-									<Value>-3</Value>
+									<Value>5.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[112]</Name>
-									<Value>1.5</Value>
+									<Value>0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[113]</Name>
@@ -12582,11 +12567,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[114]</Name>
-									<Value>-2</Value>
+									<Value>7.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[115]</Name>
-									<Value>1.5</Value>
+									<Value>0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[116]</Name>
@@ -12594,11 +12579,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[117]</Name>
-									<Value>-1</Value>
+									<Value>9.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[118]</Name>
-									<Value>1.5</Value>
+									<Value>0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[119]</Name>
@@ -12606,7 +12591,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[120]</Name>
-									<Value>0</Value>
+									<Value>-9.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[121]</Name>
@@ -12618,7 +12603,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[123]</Name>
-									<Value>1</Value>
+									<Value>-7.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[124]</Name>
@@ -12630,7 +12615,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[126]</Name>
-									<Value>2</Value>
+									<Value>-5.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[127]</Name>
@@ -12642,7 +12627,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[129]</Name>
-									<Value>3</Value>
+									<Value>-3.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[130]</Name>
@@ -12654,7 +12639,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[132]</Name>
-									<Value>4</Value>
+									<Value>-1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[133]</Name>
@@ -12666,11 +12651,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[135]</Name>
-									<Value>-4</Value>
+									<Value>0.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[136]</Name>
-									<Value>2.5</Value>
+									<Value>1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[137]</Name>
@@ -12678,11 +12663,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[138]</Name>
-									<Value>-3</Value>
+									<Value>2.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[139]</Name>
-									<Value>2.5</Value>
+									<Value>1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[140]</Name>
@@ -12690,11 +12675,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[141]</Name>
-									<Value>-2</Value>
+									<Value>4.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[142]</Name>
-									<Value>2.5</Value>
+									<Value>1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[143]</Name>
@@ -12702,11 +12687,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[144]</Name>
-									<Value>-1</Value>
+									<Value>6.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[145]</Name>
-									<Value>2.5</Value>
+									<Value>1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[146]</Name>
@@ -12714,11 +12699,11 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[147]</Name>
-									<Value>0</Value>
+									<Value>8.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[148]</Name>
-									<Value>2.5</Value>
+									<Value>1.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[149]</Name>
@@ -12726,7 +12711,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[150]</Name>
-									<Value>1</Value>
+									<Value>-8.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[151]</Name>
@@ -12738,7 +12723,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[153]</Name>
-									<Value>2</Value>
+									<Value>-6.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[154]</Name>
@@ -12750,7 +12735,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[156]</Name>
-									<Value>3</Value>
+									<Value>-4.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[157]</Name>
@@ -12762,7 +12747,7 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[159]</Name>
-									<Value>4</Value>
+									<Value>-2.5</Value>
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[160]</Name>
@@ -12770,6 +12755,78 @@
 								</Value>
 								<Value>
 									<Name>CalibPatternRef[161]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[162]</Name>
+									<Value>-0.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[163]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[164]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[165]</Name>
+									<Value>1.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[166]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[167]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[168]</Name>
+									<Value>3.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[169]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[170]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[171]</Name>
+									<Value>5.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[172]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[173]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[174]</Name>
+									<Value>7.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[175]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[176]</Name>
+									<Value>0</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[177]</Name>
+									<Value>9.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[178]</Name>
+									<Value>2.5</Value>
+								</Value>
+								<Value>
+									<Name>CalibPatternRef[179]</Name>
 									<Value>0</Value>
 								</Value>
 								<Value>

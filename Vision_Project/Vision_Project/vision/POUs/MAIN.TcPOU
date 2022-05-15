@@ -3,41 +3,56 @@
   <POU Name="MAIN" Id="{cf99f84a-6569-4efc-8acc-1393748038da}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
-	hr: HRESULT;
-	fbCamera: FB_VN_SimpleCameraControl;
-	eState: ETcVnCameraState;
-	
-	ipImageIn: ITcVnImage;
-	ipImageInDisp: ITcVnDisplayableImage;
+	hr               : HRESULT;
+
+ipImageIn        : ITcVnImage;
+ipImageInDisp    : ITcVnDisplayableImage;
+ipImageRes       : ITcVnImage;
+ipImageResDisp   : ITcVnDisplayableImage;
+
+// result
+stArc            : TcVnCircularArc;
+
+// input parameters (to specify where to start searching for the circular arc)
+aCenter          : TcVnPoint2_REAL := [420, 310];
+fRadius          : REAL := 270;
+fDirection       : LREAL := 2.1;
+
+// drawing
+aColor           : TcVnVector4_LREAL := [0, 175, 0];
+sText            : STRING(255);
+	aCenterPoint: INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[eState:= fbCamera.GetState();
+      <ST><![CDATA[hr := F_VN_LocateCircularArc(
+                    ipSrcImage         :=   ipImageIn,
+                    stCircularArc      :=   stArc,
+                    aCenterPoint       :=   aCenter,
+                    fSearchRadius      :=   fRadius,
+                    fArcDirectionRad   :=   fDirection,
+                    eEdgeDirection     :=   TCVN_ED_LIGHT_TO_DARK,
+                    fMinStrength       :=   100,
+                    hrPrev             :=   hr);
 
-CASE eState OF 
-	TCVN_CS_INITIAL, TCVN_CS_OPENING, TCVN_CS_OPENED, TCVN_CS_STARTACQUISITION:
-	hr:=fbCamera.StartAcquisition();
-	
-	TCVN_CS_ACQUIRING:
-	hr:= fbCamera.GetCurrentImage(ipImageIn);
-	hr:= F_VN_CopyIntoDisplayableImage(ipImageIn, ipImageInDisp, hr);
-	
-	TCVN_CS_ERROR:
-	hr:= fbCamera.Reset();
-	
-	
-END_CASE]]></ST>
+// Draw result for visualization
+hr := F_VN_ConvertColorSpace(ipImageIn, ipImageRes, TCVN_CST_GRAY_TO_RGB, hr);
+hr := F_VN_DrawCircularArc(stArc, ipImageRes, aColor, 2, hr);
+sText := CONCAT(CONCAT(CONCAT('Center ', REAL_TO_STRING(stArc.aCenter[0])), ', '), REAL_TO_STRING(stArc.aCenter[1]));
+hr := F_VN_PutText(sText, ipImageRes, 420, 25, TCVN_FT_HERSHEY_SIMPLEX, 0.7, aColor, hr);
+sText := CONCAT('Radius ', REAL_TO_STRING(stArc.fRadius));
+hr := F_VN_PutText(sText, ipImageRes, 420, 50, TCVN_FT_HERSHEY_SIMPLEX, 0.7, aColor, hr);
+sText := CONCAT('Angle start ', REAL_TO_STRING(stArc.fStartAngle * 180 / LREAL_TO_REAL(PI)));
+hr := F_VN_PutText(sText, ipImageRes, 420, 75, TCVN_FT_HERSHEY_SIMPLEX, 0.7, aColor, hr);
+sText := CONCAT('Angle end ', REAL_TO_STRING(stArc.fEndAngle * 180 / LREAL_TO_REAL(PI)));
+hr := F_VN_PutText(sText, ipImageRes, 420, 100, TCVN_FT_HERSHEY_SIMPLEX, 0.7, aColor, hr);
+
+// Display source and result image
+hr := F_VN_TransformIntoDisplayableImage(ipImageIn, ipImageInDisp, S_OK);
+hr := F_VN_TransformIntoDisplayableImage(ipImageRes, ipImageResDisp, S_OK);]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="2" Count="0" />
-      <LineId Id="14" Count="0" />
-      <LineId Id="13" Count="0" />
-      <LineId Id="15" Count="0" />
-      <LineId Id="18" Count="0" />
-      <LineId Id="20" Count="2" />
-      <LineId Id="24" Count="3" />
-      <LineId Id="23" Count="0" />
-      <LineId Id="19" Count="0" />
+      <LineId Id="81" Count="23" />
       <LineId Id="16" Count="0" />
     </LineIds>
   </POU>

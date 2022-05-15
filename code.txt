@@ -1,0 +1,34 @@
+vision code voor ADS watch:
+
+VAR:
+
+PROGRAM MAIN
+VAR
+	hr: HRESULT;
+	fbCamera: FB_VN_SimpleCameraControl;
+	eState: ETcVnCameraState;
+	
+	ipImageIn: ITcVnImage;
+	ipImageInDisp: ITcVnDisplayableImage;
+END_VAR
+
+
+
+Code:
+
+eState:= fbCamera.GetState();
+
+CASE eState OF 
+	TCVN_CS_INITIAL, TCVN_CS_OPENING, TCVN_CS_OPENED, TCVN_CS_STARTACQUISITION:
+	hr:=fbCamera.StartAcquisition();
+	
+	TCVN_CS_ACQUIRING:
+	hr:= fbCamera.GetCurrentImage(ipImageIn);
+	hr:= F_VN_ConvertColorSpace(ipSrcImage:= ipImageIn, ipDestImage:=ipImageIn, eTransform:= TCVN_CST_BAYER_RG_TO_RGB, hrPrev:= hr);
+	hr:= F_VN_CopyIntoDisplayableImage(ipImageIn, ipImageInDisp, hr);
+	
+	TCVN_CS_ERROR:
+	hr:= fbCamera.Reset();
+	
+	
+END_CASE
