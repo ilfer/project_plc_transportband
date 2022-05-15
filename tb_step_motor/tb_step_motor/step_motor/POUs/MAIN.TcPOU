@@ -1,13 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{ea18e8ba-a83b-4a6c-91fc-8548b5d5a3c9}">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="MAIN" Id="{ea18e8ba-a83b-4a6c-91fc-8548b5d5a3c9}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	fbJog: MC_Jog;
+	fbPowerAxis: MC_Power;
+	fbMoveContinuous  : MC_MoveContinuousRelative;
+		
+	Axis: AXIS_REF;
+	bExecute, bEnable, bEnableP, bEnableN: BOOL;
+	rVelocity : LREAL := 100;
+	rDistance : LREAL := 360;
 END_VAR
-]]>
-    </Declaration>
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[GVL.fbPowerAxis(
+	Axis:= GVL.Axis,
+	Enable:= bEnable, 
+	Enable_Positive:= bEnableP, 
+	Enable_Negative:= bEnableN, 
+	Override:= GVL.PowerOverride, 
+	BufferMode:= , 
+	Options:= , 
+	Status=> GVL.Power.Status, 
+	Busy=> GVL.Power.Busy, 
+	Active=> GVL.Power.Active, 
+	Error=> GVL.Power.Error, 
+	ErrorID=> gvl.Power.ErrorID);
+	
+	
+GVL.fbMoveContinuous(
+	Axis:= GVL.Axis, 
+	Execute:= bExecute, 
+	Distance:= rDistance, 
+	Velocity:= rVelocity, 
+	EndVelocity:= rVelocity, 
+	Acceleration:= 0, 
+	Deceleration:= 0, 
+	Jerk:= 0, 
+	BufferMode:= MC_Aborting, 
+	Options:= , 
+	InEndVelocity=> GVL.MoveRelative.InVelocity, 
+	Busy=> GVL.MoveRelative.Busy, 
+	Active=> GVL.MoveRelative.Active, 
+	CommandAborted=> GVL.MoveRelative.CadAborted, 
+	Error=> GVL.MoveRelative.Error, 
+	ErrorID=> GVL.MoveRelative.ErrorID);]]></ST>
     </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="30" Count="11" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="173" Count="0" />
+      <LineId Id="44" Count="0" />
+      <LineId Id="47" Count="15" />
+      <LineId Id="45" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
