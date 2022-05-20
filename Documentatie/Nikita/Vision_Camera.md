@@ -33,7 +33,7 @@ Once the camera is found you can activate it. You can find the activity status i
 To see the image, go to the configuration Assistant and press the start Acquisition button. Turn on De-Bayering for color and change the ExposureTimeAbs value.
 ![image](https://user-images.githubusercontent.com/79916453/167303422-76ab87ce-681d-4763-b14f-28679832270d.png)
 
-If there are problems searching for the camera in the Camera Initialization Assistant tab, you can use a separate software to search for the ip, the "Advanced IP Scanner" application.
+If there are problems searching for the camera in the Camera Initialization Assistant tab, you can use a separate software to search for the ip, the "Advanced IP Scanner" application. But the IP address for this Mako G040 camera is 169.254.251.174.
 
 
 ## Software
