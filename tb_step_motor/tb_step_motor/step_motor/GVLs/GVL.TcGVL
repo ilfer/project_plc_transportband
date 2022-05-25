@@ -18,6 +18,7 @@ VAR_GLOBAL
 	
 	Power 		  : ST_MC_Status;
 	MoveRelative  : ST_MC_Status;
+	Jog			  : ST_MC_Status;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
