@@ -3,35 +3,41 @@
   <POU Name="MAIN" Id="{ea18e8ba-a83b-4a6c-91fc-8548b5d5a3c9}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	Axis: AXIS_REF;
 	fbPowerAxis: MC_Power;
 	fbMoveContinuous  : MC_MoveContinuousRelative;
 	MC_Jog : MC_Jog;
-		
-	Axis: AXIS_REF;
-	bExecute, bEnable: BOOL;
+	
+	bEnable : BOOL;
+	bReset : BOOL := FALSE;
+	bExecute: BOOL;
     bEnableP, bEnableN: BOOL := TRUE;
 	rVelocity : LREAL := 600;
+	rTorque : LREAL := 0.4;
 	rDistance : LREAL := 360;
+	PowerOverride	: LREAL := 100;
+	bJogForward, bJogBackwards: BOOL;
+	fbMove: MC_MoveRelative;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[GVL.fbPowerAxis(
-	Axis:= GVL.Axis,
+      <ST><![CDATA[fbPowerAxis(
+	Axis:= Axis,
 	Enable:= bEnable, 
 	Enable_Positive:= bEnableP, 
 	Enable_Negative:= bEnableN, 
-	Override:= GVL.PowerOverride, 
+	Override:= PowerOverride, 
 	BufferMode:= MC_Aborting, 
 	Options:= , 
 	Status=> GVL.Power.Status, 
 	Busy=> GVL.Power.Busy, 
 	Active=> GVL.Power.Active, 
 	Error=> GVL.Power.Error, 
-	ErrorID=> gvl.Power.ErrorID);
+	ErrorID=> GVL.Power.ErrorID);
 	
 	
-(*GVL.fbMoveContinuous(
-	Axis:= GVL.Axis, 
+(*fbMoveContinuous(
+	Axis:= Axis, 
 	Execute:= bExecute, 
 	Distance:= rDistance, 
 	Velocity:= rVelocity, 
@@ -39,7 +45,7 @@ END_VAR
 	Acceleration:= 500, 
 	Deceleration:= 500, 
 	Jerk:= 10, 
-	BufferMode:= MC_Aborting, 
+	BufferMode:= MC_Aborting,
 	Options:= , 
 	InEndVelocity=> GVL.MoveRelative.InVelocity, 
 	Busy=> GVL.MoveRelative.Busy, 
@@ -48,10 +54,10 @@ END_VAR
 	Error=> GVL.MoveRelative.Error, 
 	ErrorID=> GVL.MoveRelative.ErrorID);*)
 	
-	(*MC_Jog(
-	Axis:= GVL.Axis, 
-	JogForward:= , 
-	JogBackwards:= , 
+(*MC_Jog(
+	Axis:= Axis, 
+	JogForward:= bJogForward, 
+	JogBackwards:= bJogBackwards, 
 	Mode:= MC_JOGMODE_CONTINOUS, 
 	Position:= rDistance, 
 	Velocity:= rVelocity, 
@@ -63,7 +69,24 @@ END_VAR
 	Active=> GVL.Jog.Active, 
 	CommandAborted=> GVL.Jog.CadAborted, 
 	Error=> GVL.Jog.Error, 
-	ErrorID=> GVL.Jog.ErrorID);*)]]></ST>
+	ErrorID=> GVL.Jog.ErrorID);*)
+	
+fbMove(
+	Axis:= Axis, 
+	Execute:= bExecute, 
+	Distance:= 300, 
+	Velocity:= 300, 
+	Acceleration:= 50, 
+	Deceleration:= 50, 
+	Jerk:= , 
+	BufferMode:= , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="30" Count="11" />
@@ -75,6 +98,9 @@ END_VAR
       <LineId Id="186" Count="0" />
       <LineId Id="188" Count="14" />
       <LineId Id="187" Count="0" />
+      <LineId Id="228" Count="0" />
+      <LineId Id="231" Count="14" />
+      <LineId Id="229" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

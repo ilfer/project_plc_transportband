@@ -45,10 +45,10 @@
             <d n="FbMethods" t="CaseInsensitiveHashtable" ckt="String" cvt="Guid">
               <v>FB_Init</v>
               <v>fd92f885-f94b-4a19-b375-77abeddaa1ef</v>
-              <v>FB_Reinit</v>
-              <v>53b8e87f-60fd-4cbe-800f-bcdc0d3f1772</v>
               <v>FB_Exit</v>
               <v>00d5b6ae-aca3-4b06-ad0b-ff5595173238</v>
+              <v>FB_Reinit</v>
+              <v>53b8e87f-60fd-4cbe-800f-bcdc0d3f1772</v>
             </d>
             <v n="FbName">"NotImportant"</v>
             <v n="FbGuid">{4156fe3c-7d1b-4d46-9194-95f12aae4192}</v>

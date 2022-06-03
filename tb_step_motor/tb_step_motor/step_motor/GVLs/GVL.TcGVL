@@ -4,11 +4,11 @@
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
 	// Axis
-	Axis: AXIS_REF;
+	//Axis: AXIS_REF;
 	
 	// Function blocks
-	fbPowerAxis: MC_Power;
-	fbMoveContinuous: MC_MoveContinuousRelative;
+	//fbPowerAxis: MC_Power;
+	//fbMoveContinuous: MC_MoveContinuousRelative;
 	
 	// Parameters
 	
