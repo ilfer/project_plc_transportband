@@ -21,3 +21,7 @@ The DC motor is not strong enough to run the conveyor belt.
 
 ## Solution
 Use a different (stronger) motor. The stepper motor AS1010-0000 will be tested.
+
+<br />
+
+*time spent: March 25 to April 15 (4 weeks -> 4 hours * 4 = 16 hours)*
