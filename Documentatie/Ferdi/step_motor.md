@@ -10,6 +10,7 @@ Because the DC motor was not powerful enough to control the conveyor belt, we de
 2. [Hardware](#H)
 3. [Software](#code)
    - 3.1 [Startup](#SU)
+   - 3.2 [Other parameters ](#OP)
 4. [Result](#R)
 5. [Solution](#S)
 
@@ -47,6 +48,14 @@ After creating a twincat project, we first set certain parameters that have to d
    *These parameters can also be imported via this [XML file](https://github.com/ilfer/project_plc_transportband/blob/5f5fdd1edf0ba534ac298b7523b0595765bade60/tb_step_motor/StartUp.xml).*
    
   <img src="https://i.postimg.cc/RhzzJLLV/s.png" width="500">
+  
+  ### 3.2 Other parameters <a name="OP"></a>
+Furthermore, other parameters need to be set. These parameters are important that are used later in a program. The value of the parameters must be determined in advance or looked up in data sheets. Axis 1 sets parameters that include speed, acceleration, and so on.
+
+   Other parameters must also be set in 'Enc' and 'Drive'.
+   
+   *The parameters in the image are default values.*
+  <img src="https://i.postimg.cc/zGbZct7v/parameters.png" width="1000">
 
 ## 4. Result <a name="R"></a>
 
