@@ -5,13 +5,23 @@
 ## About
 Because the DC motor was not powerful enough to control the conveyor belt, we decided to use a stepper motor that is more powerful.
 
-## Materials and methods
+### Table of Contents
+1. [Materials and methods](#MM)
+2. [Hardware](#H)
+3. [Software](#code)
+   - 3.1 [Parameters](#P)
+4. [Result](#R)
+5. [Solution](#S)
+
+---
+
+## 1. Materials and methods <a name="MM"></a>
 
 - Stepper motor: [Beckhoff AS1010-0000](https://www.beckhoff.com/nl-be/products/motion/compact-drive-technology/asxxxx-stepper-motors/as1010.html) stepper motor 0.38 Nm (M0), N1 (NEMA17/42 mm)
 - PLC card for the stepper motor: EL7332
 - Motor cable (type unknown)
 
-## Hardware
+## 2. Hardware <a name="H"></a>
 
 The connection between the PLC and the stepper motor is made using a motor cable. The first image shows the connection.
 
@@ -26,13 +36,13 @@ The other side of the motor cable is connected with the cable that is attached t
 </p>
 
 
-## Software
+## 3. Software <a name="code"></a>
+  ### 3.1 Parameters <a name="P"></a>
+
+## 4. Result <a name="R"></a>
 
 
-## Result
-
-
-## Solution
+## 5. Solution <a name="S"></a>
 
 
 <br />
