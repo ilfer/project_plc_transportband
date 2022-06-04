@@ -1,6 +1,6 @@
 # Stepper motor
 
-<img src="https://multimedia.beckhoff.com/media/as1010-0000__web_preview.png" width="250">
+<img src="https://i.postimg.cc/XqqWKYyp/bckhff.png" width="150">
 
 ## About
 Because the DC motor was not powerful enough to control the conveyor belt, we decided to use a stepper motor that is more powerful.
