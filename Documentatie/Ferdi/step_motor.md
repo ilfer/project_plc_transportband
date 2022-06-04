@@ -71,13 +71,13 @@ The most important inputs that we have to give are the Axis (coupling with the s
 #### 3.3.2 MC_Jog <a name="jog"></a>
 
 Another function block that we use is the MC_Jog. This ensures that we can control the engine more manually.
-The engine can be driven when we set the inputs 'JogForward' or 'JogBackwards' high. We can also give the speed and distance.
+The motor can be controlled when we set the inputs 'JogForward' or 'JogBackwards' high. The motor only remains in operation as long as one of these inputs becomes high. We can also give the speed and distance.
 
 <img src="https://infosys.beckhoff.com/content/1033/tcplclib_tc2_mc2/Images/png/9007199325083403__Web.png" width="300">
 
 #### 3.3.3 MC_MoveRelative <a name="mrelative"></a>
 
-
+MC_MoveRelative is similar to MC_Jog. The MC_MoveRelative makes it easier because here we can enter the distance that the engine must achieve.  The motor operates until the distance is reached.
 
 <img src="https://infosys.beckhoff.com/content/1033/tcplclib_tc2_mc2/Images/png/9007199325025803__Web.png" width="300">
 
