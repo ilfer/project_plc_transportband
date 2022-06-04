@@ -90,9 +90,11 @@ To be able to use the above function blocks, it is necessary to add a library. T
 
 ## 4. Result <a name="R"></a>
 
+As a result, I always got (different) errors. This is because apparently not all parameters are (incorrectly) filled in.
 
 ## 5. Solution <a name="S"></a>
 
+Looking up/calculating the remaining parameters.
 
 <br />
 
