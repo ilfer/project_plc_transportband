@@ -81,6 +81,10 @@ MC_MoveRelative is similar to MC_Jog. The MC_MoveRelative makes it easier becaus
 
 <img src="https://infosys.beckhoff.com/content/1033/tcplclib_tc2_mc2/Images/png/9007199325025803__Web.png" width="300">
 
+### 3.3 Library <a name="lib"></a>
+
+To be able to use the above function blocks, it is necessary to add a library. The Tc2_MC2 library contains function blocks to program machine applications.
+
 ## 4. Result <a name="R"></a>
 
 
