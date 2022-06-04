@@ -99,4 +99,4 @@ Looking up/calculating the remaining parameters.
 <br />
 
 *time spent: April 22 to June 3 (6 weeks -> 4 hours * 6 = 24 hours)* <br />
-*It took a lot of time because I hadn't controlled a motor via PLC before and because I started from a new project without any software/parameters.*
+*It took a lot of time because I hadn't controlled a motor via PLC before and because I started from a new project without any software/parameter.*
