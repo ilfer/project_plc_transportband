@@ -9,6 +9,10 @@ Because the DC motor was not powerful enough to control the conveyor belt, we de
 
 - Stepper motor: [Beckhoff AS1010-0000](https://www.beckhoff.com/nl-be/products/motion/compact-drive-technology/asxxxx-stepper-motors/as1010.html) stepper motor 0.38 Nm (M0), N1 (NEMA17/42 mm)
 - PLC card for the stepper motor: EL7332
+- Motor cable (type unknown)
+
+## Hardware
+
 
 ## Software
 
