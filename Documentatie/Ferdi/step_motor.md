@@ -11,6 +11,8 @@ Because the DC motor was not powerful enough to control the conveyor belt, we de
 3. [Software](#code)
    - 3.1 [Startup](#SU)
    - 3.2 [Other parameters ](#OP)
+   - 3.3 [Program](#twincat)
+   - 3.3.1 [MC_Power](#power)
 4. [Result](#R)
 5. [Solution](#S)
 
@@ -40,22 +42,44 @@ The other side of the motor cable is connected with the cable that is attached t
 ## 3. Software <a name="code"></a>
 After creating a twincat project, we first set certain parameters that have to do with the specifications of the motor.
 
-  ### 3.1 Startup <a name="SU"></a>
-  Starting with the Startup we provide the right basic specifications of the stepper motor. This largely contains the power supply or the load that the engine can handle.
+### 3.1 Startup <a name="SU"></a>
+Starting with the Startup we provide the right basic specifications of the stepper motor. This largely contains the power supply or the load that the engine can handle.
 
-   We set parameters here such as maximum current, voltage and resistance motor coil. All these parameters can be found in [beckhoff's data sheet](https://download.beckhoff.com/download/Document/motion/as1000_ba_en.pdf).
+We set parameters here such as maximum current, voltage and resistance motor coil. All these parameters can be found in [beckhoff's data sheet](https://download.beckhoff.com/download/Document/motion/as1000_ba_en.pdf).
    
-   *These parameters can also be imported via this [XML file](https://github.com/ilfer/project_plc_transportband/blob/5f5fdd1edf0ba534ac298b7523b0595765bade60/tb_step_motor/StartUp.xml).*
+*These parameters can also be imported via this [XML file](https://github.com/ilfer/project_plc_transportband/blob/5f5fdd1edf0ba534ac298b7523b0595765bade60/tb_step_motor/StartUp.xml).*
    
-  <img src="https://i.postimg.cc/RhzzJLLV/s.png" width="500">
+<img src="https://i.postimg.cc/RhzzJLLV/s.png" width="500">
   
-  ### 3.2 Other parameters <a name="OP"></a>
+### 3.2 Other parameters <a name="OP"></a>
 Furthermore, other parameters need to be set. These parameters are important that are used later in a program. The value of the parameters must be determined in advance or looked up in data sheets. Axis 1 sets parameters that include speed, acceleration, and so on.
 
-   Other parameters must also be set in 'Enc' and 'Drive'.
+Other parameters must also be set in 'Enc' and 'Drive'.
    
-   *The parameters in the image are default values.*
-  <img src="https://i.postimg.cc/zGbZct7v/parameters.png" width="1000">
+*The parameters in the image are default values.*
+<img src="https://i.postimg.cc/zGbZct7v/parameters.png" width="1000">
+  
+### 3.3 Program <a name="twincat"></a>
+#### 3.3.1 MC_Power <a name="power"></a>
+      
+MC_Power takes care of switching on the engine. In every engine application, this function block is necessary. It only ensures that we can use the engine and therefore does not let the engine run.
+
+The most important inputs that we have to give are the Axis (coupling with the stepper motor), enable (activating the MC_Power), enable positive/negative and override. The remaining entries include error codes.
+      
+<img src="https://infosys.beckhoff.com/content/1033/tcplclib_tc2_mc2/Images/png/9007199324926603__Web.png" width="300">
+
+#### 3.3.2 MC_Jog <a name="jog"></a>
+
+Another function block that we use is the MC_Jog. This ensures that we can control the engine more manually.
+The engine can be driven when we set the inputs 'JogForward' or 'JogBackwards' high. We can also give the speed and distance.
+
+<img src="https://infosys.beckhoff.com/content/1033/tcplclib_tc2_mc2/Images/png/9007199325083403__Web.png" width="300">
+
+#### 3.3.3 MC_MoveRelative <a name="mrelative"></a>
+
+
+
+<img src="https://infosys.beckhoff.com/content/1033/tcplclib_tc2_mc2/Images/png/9007199325025803__Web.png" width="300">
 
 ## 4. Result <a name="R"></a>
 
@@ -65,4 +89,5 @@ Furthermore, other parameters need to be set. These parameters are important tha
 
 <br />
 
-*time spent: April 22 to June 3 (6 weeks -> 4 hours * 6 = 24 hours)*
+*time spent: April 22 to June 3 (6 weeks -> 4 hours * 6 = 24 hours)* <br />
+*It took a lot of time because I hadn't controlled a motor via PLC before and because I started from a new project.*
