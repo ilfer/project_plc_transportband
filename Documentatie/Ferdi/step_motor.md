@@ -12,7 +12,10 @@ Because the DC motor was not powerful enough to control the conveyor belt, we de
    - 3.1 [Startup](#SU)
    - 3.2 [Other parameters ](#OP)
    - 3.3 [Program](#twincat)
-   - 3.3.1 [MC_Power](#power)
+      - 3.3.1 [MC_Power](#power)
+      - 3.3.2 [MC_Jog](#jog)
+      - 3.3.3 [MC_MoveRelative](#mrelative)
+      - 3.3.4 [Library](#lib)
 4. [Result](#R)
 5. [Solution](#S)
 
@@ -81,7 +84,7 @@ MC_MoveRelative is similar to MC_Jog. The MC_MoveRelative makes it easier becaus
 
 <img src="https://infosys.beckhoff.com/content/1033/tcplclib_tc2_mc2/Images/png/9007199325025803__Web.png" width="300">
 
-### 3.3 Library <a name="lib"></a>
+### 3.3.4 Library <a name="lib"></a>
 
 To be able to use the above function blocks, it is necessary to add a library. The Tc2_MC2 library contains function blocks to program machine applications.
 
