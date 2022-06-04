@@ -9,7 +9,7 @@ Because the DC motor was not powerful enough to control the conveyor belt, we de
 1. [Materials and methods](#MM)
 2. [Hardware](#H)
 3. [Software](#code)
-   - 3.1 [Parameters](#P)
+   - 3.1 [Startup](#SU)
 4. [Result](#R)
 5. [Solution](#S)
 
@@ -37,7 +37,14 @@ The other side of the motor cable is connected with the cable that is attached t
 
 
 ## 3. Software <a name="code"></a>
-  ### 3.1 Parameters <a name="P"></a>
+After creating a twincat project, we first set certain parameters that have to do with the specifications of the motor.
+
+  ### 3.1 Startup <a name="SU"></a>
+  Starting with the Startup we provide the right basic specifications of the stepper motor. This largely contains the power supply or the load that the engine can handle.
+
+   We set parameters here such as maximum current, voltage and resistance motor coil. All these parameters can be found in [beckhoff's data sheet](https://download.beckhoff.com/download/Document/motion/as1000_ba_en.pdf).
+   
+  <img src="https://i.postimg.cc/RhzzJLLV/s.png" width="500">
 
 ## 4. Result <a name="R"></a>
 
