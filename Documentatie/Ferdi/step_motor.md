@@ -44,6 +44,8 @@ After creating a twincat project, we first set certain parameters that have to d
 
    We set parameters here such as maximum current, voltage and resistance motor coil. All these parameters can be found in [beckhoff's data sheet](https://download.beckhoff.com/download/Document/motion/as1000_ba_en.pdf).
    
+   *These parameters can also be imported via this [XML file](https://github.com/ilfer/project_plc_transportband/blob/5f5fdd1edf0ba534ac298b7523b0595765bade60/tb_step_motor/StartUp.xml).*
+   
   <img src="https://i.postimg.cc/RhzzJLLV/s.png" width="500">
 
 ## 4. Result <a name="R"></a>
